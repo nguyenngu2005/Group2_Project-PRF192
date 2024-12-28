@@ -78,3 +78,26 @@ form button {
   font-size: 13px;
   margin-top: 13px;
 }
+@media screen and (max-width: 767.98px) {
+  .content-header{
+    display:block;
+    background: #fbf7f4;
+    align-items: center;
+  }
+  .left-header img{
+    width: 0%;
+  }
+  .logo-header img{
+    margin-top:20px;
+    width: 50%;
+    margin-left:30%;
+  }
+  .right-header img{
+    width: 0%;
+  }
+  form {
+    margin-left: 10%;
+    display: flex;
+    margin-top: 20px;
+  }
+}
