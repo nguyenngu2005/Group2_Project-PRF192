@@ -29,7 +29,6 @@ document
     }
   });
 
-/*************  ✨ Codeium Command 🌟  *************/
 //chức năng hiện part khi vừa load xong trang
 /**
  * Hiển thị toàn bộ part và question sau khi load xong trang
