@@ -1,29 +1,38 @@
-<<<<<<< HEAD
+/* config */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 /*footer*/
 .footer-content {
-    display: flex;
-    justify-content:space-between ;
-    background-color: #FBF7F4;
-    margin-top: 100%;
-    height: 110px;
-
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbf7f4;
+  margin-top: 100%;
+  min-height: 110px;
 }
 .logo img {
-    width: 17%;
-    margin-left: 12%;
-    margin-top: 13px;
+  width: 17%;
+  margin-left: 12%;
+  margin-top: 13px;
 }
 .mid-footer {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 13px;
-    margin-right: 15%;
-    margin-top: 20px;
+  font-size: 13px;
+  margin-right: 15%;
+  margin-top: 20px;
 }
 .right-footer {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 13px;
-    margin-top: 13px;
+  font-size: 13px;
+  margin-top: 13px;
 }
-=======
-
->>>>>>> d196a0d199d97abbb473bec1cdf6cf4273bf0412
