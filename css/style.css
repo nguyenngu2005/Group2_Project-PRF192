@@ -13,6 +13,48 @@ html {
 body {
   font-size: 1.6rem;
 }
+/*header*/
+.content-header{
+  display: flex;
+  justify-content: space-between;
+  background: #fbf7f4;
+  
+}
+.left-header img{
+  width: 100%;
+}
+.logo-header img{
+  margin-top:40px;
+  width: 80%;
+  margin-left:10%;
+}
+.right-header img{
+  width: 50%;
+  margin-left:47%;
+}
+form {
+  display: flex;
+  margin-top:15%;
+}
+
+form input {
+  height:10%;
+  width: 500px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  height: 10%;
+  margin-left: 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-weight: bold;
+}
 
 /*footer*/
 .footer-content {
