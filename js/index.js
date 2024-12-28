@@ -1,8 +1,35 @@
+//chức năng thêm xoá toàn bộ .clicked và thêm .clicked cho part hoặc question được click
+document.querySelector(".left-panel").addEventListener("click", (event) => {
+  //xoá
+  document.querySelectorAll(".part").forEach((part) => {
+    part.classList.remove("clicked");
+  });
+  document.querySelectorAll(".question").forEach((question) => {
+    question.classList.remove("clicked");
+  });
+  document.querySelectorAll(".questions").forEach((question) => {
+    question.classList.remove("clicked");
+  });
+
+  //hiện
+  if (
+    event.target.classList.contains("part") ||
+    event.target.classList.contains("question")
+  ) {
+    event.target.classList.add("clicked");
+  }
+});
+
 //chức năng hiện list câu hỏi khi click vào part
 document.querySelector(".left-panel").addEventListener("click", (event) => {
   if (event.target.classList.contains("part")) {
     const part = event.target.dataset.target;
-    document.getElementById(part).classList.toggle("active");
+    const questions = document.querySelectorAll(".question");
+    questions.forEach((question) => {
+      if (question.dataset.part === part) {
+        question.classList.toggle("active");
+      }
+    });
   }
 });
 
