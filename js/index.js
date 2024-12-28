@@ -1,8 +1,50 @@
+//chức năng hiện part khi vừa load xong trang
+const init = () => {
+  const parts = document.querySelectorAll(".part");
+  document.querySelectorAll(".part").forEach((part) => {
+    part.classList.remove("active");
+    part.classList.remove("clicked");
+  });
+  document.querySelectorAll(".question").forEach((question) => {
+    question.classList.remove("active");
+    question.classList.remove("clicked");
+  });
+  parts.forEach((part) => {
+    part.classList.add("active");
+    console.log("done");
+  });
+};
+document.addEventListener("DOMContentLoaded", init());
+
+//chức năng thêm xoá toàn bộ .clicked và thêm .clicked cho part hoặc question được click
+document.querySelector(".left-panel").addEventListener("click", (event) => {
+  //xoá
+  document.querySelectorAll(".part").forEach((part) => {
+    part.classList.remove("clicked");
+  });
+  document.querySelectorAll(".question").forEach((question) => {
+    question.classList.remove("clicked");
+  });
+
+  //hiện
+  if (
+    event.target.classList.contains("part") ||
+    event.target.classList.contains("question")
+  ) {
+    event.target.classList.add("clicked");
+  }
+});
+
 //chức năng hiện list câu hỏi khi click vào part
 document.querySelector(".left-panel").addEventListener("click", (event) => {
   if (event.target.classList.contains("part")) {
     const part = event.target.dataset.target;
-    document.getElementById(part).classList.toggle("active");
+    const questions = document.querySelectorAll(".question");
+    questions.forEach((question) => {
+      if (question.dataset.part === part) {
+        question.classList.toggle("active");
+      }
+    });
   }
 });
 
@@ -29,20 +71,7 @@ document
     }
   });
 
-//chức năng hiện part khi vừa load xong trang
-/**
- * Hiển thị toàn bộ part và question sau khi load xong trang
- */
-const init = () => {
-  const parts = document.querySelectorAll(".part");
-  parts.forEach((part) => {
-    part.classList.add("active");
-  });
-};
-document.addEventListener("DOMContentLoaded", init());
-
-/**
- * Chức năng search theo tên part hoặc tên question
+/**Chức năng search theo tên part hoặc tên question
  * Khi tìm thấy tên part sẽ hiện list part đó gồm các câu bên trong
  * Nếu chỉ tìm thấy tên question thì sẽ hiện part chứa question đó và chỉ question đó, ẩn các question khác trong part
  */
@@ -62,17 +91,21 @@ document.querySelector("#filter").addEventListener("keyup", (event) => {
     //cho tất cả parts và questions ẩn
     document.querySelectorAll(".part").forEach((part) => {
       part.classList.remove("active");
+      part.classList.remove("clicked");
     });
     document.querySelectorAll(".question").forEach((question) => {
       question.classList.remove("active");
-    });
-    document.querySelectorAll(".questions").forEach((question) => {
-      question.classList.remove("active");
+      question.classList.remove("clicked");
     });
 
     //hiển thị theo filteredParts
-
+    filteredParts.forEach((part) => {
+      part.classList.add("active");
+    });
     //hiển thị theo filteredQuestions
+    filteredQuestions.forEach((question) => {
+      question.classList.add("active");
+    });
   } else {
     init();
   }
