@@ -71,7 +71,9 @@ document.querySelector("#filter").addEventListener("keyup", (event) => {
       question.classList.remove("active");
     });
 
-    //hiển thị theo filteredParts và filteredQuestions
+    //hiển thị theo filteredParts
+
+    //hiển thị theo filteredQuestions
   } else {
     init();
   }
