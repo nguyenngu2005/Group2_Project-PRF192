@@ -170,7 +170,7 @@ body {
 }
 
 .logo-header img {
-  height: 100px;
+  height: auto;
   width: 350px;
   background-repeat: no-repeat;
   display: inline-block;
