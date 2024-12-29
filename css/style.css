@@ -134,7 +134,8 @@ body {
   animation-delay: 4s, 2.5s;
 }
 
-/*header*/
+/* header */
+
 .content-header {
   display: flex;
   justify-content: space-between;
@@ -158,6 +159,7 @@ body {
   background-size: 350px 100px;
   margin-right: 10px;
 }
+
 .form-header {
   display: flex;
 }
@@ -220,46 +222,41 @@ body {
   }
   .logo-header img {
     margin-top: 20px;
-    width: 50%;
-    margin-left: 30%;
-    .logo-header img {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: 70px;
-      margin-right: 0px;
-      height: 60px;
-      width: 270px;
-      background-repeat: no-repeat;
-      display: inline-block;
-      line-height: 30px;
-      vertical-align: middle;
-      background-size: 270px 90px;
-    }
-    .right-header img {
-      width: 0%;
-    }
-    form {
-      margin-left: 10%;
-      display: flex;
-      margin-top: 20px;
-    }
-    form input {
-      height: 10%;
-      width: 500px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+    margin-bottom: 20px;
+    margin-left: 70px;
+    margin-right: 0px;
+    height: 60px;
+    width: 270px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 270px 90px;
+  }
+  .right-header img {
+    width: 0%;
+  }
+  .form-header {
+    margin-left: 10%;
+    display: flex;
+    margin-top: 20px;
+  }
+  .form-header input {
+    height: 10%;
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-    form button {
-      height: 10%;
-      margin-left: 10px;
-      background-color: orange;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 7px;
-      font-weight: bold;
-    }
+  .form-header button {
+    height: 10%;
+    margin-left: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: bold;
   }
 }
