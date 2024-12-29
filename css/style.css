@@ -309,20 +309,19 @@ body {
 /*footer*/
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #fbf7f4;
   min-height: 10rem;
   font-size: 1.3rem;
 }
 
 .logo-footer img {
-  width: 17%;
+  width: 7rem;
   margin-left: 12%;
   margin-top: 13px;
 }
 
 .mid-footer {
-  margin-right: 15%;
   margin-top: 20px;
 }
 
