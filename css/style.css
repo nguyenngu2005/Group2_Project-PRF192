@@ -16,6 +16,7 @@ body {
 
 /* container */
 .container {
+  height: 100vh;
   width: 100%;
   max-width: 100%;
   padding: 0;
@@ -228,7 +229,7 @@ body {
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   background-color: #fff;
   text-align: left;
 }
@@ -238,12 +239,46 @@ body {
   overflow-y: auto;
 }
 
+.part {
+  display: none;
+  font-weight: bold;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.question {
+  display: none;
+  padding: 10px;
+  min-width: 10rem;
+  cursor: pointer;
+}
+
+.part:hover,
+.question:hover {
+  background-color: rgb(212, 253, 253);
+}
+
+.part.clicked,
+.question.clicked {
+  background-color: cyan;
+}
+
+.part.active,
+.question.active {
+  display: block;
+}
+
 .separator {
   width: 5px;
   background-color: #f4a261;
   height: auto;
   margin: 0;
   border-radius: 1px;
+}
+
+.loading {
+  font-style: italic;
+  color: #999;
 }
 
 /*footer*/
