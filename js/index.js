@@ -71,6 +71,11 @@ document
     }
   });
 
+//chặn sự kiện reset tag .form-header
+document.querySelector(".form-header").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
 /**Chức năng search theo tên part hoặc tên question
  * Khi tìm thấy tên part sẽ hiện list part đó gồm các câu bên trong
  * Nếu chỉ tìm thấy tên question thì sẽ hiện part chứa question đó và chỉ question đó, ẩn các question khác trong part
