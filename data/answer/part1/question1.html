@@ -1,22 +1,19 @@
-<div class="code-box">
-    <div class="cd-bx">
-    <p><h class="str">#include <h class="lbr"><</h><h class="lbr">stdio.h</h><h class="lbr">></> </h></p>
-    <p><h>int main() {</h></p> 
-    <p><h>int height, i, j;</h=></p>
-    <p><h><h class="cmd">printf</h>(<h class="txt">"Nhap chieu cao cua tam giac: "</h>);</h></p>
-    <p><h><h class="cmd">scanf</h>(<h class="txt">"<h class="lbr">%d</h>"</h>, <h class="str">&</h>height);</c></p>
-    <p><h><h class="str">for </h>(i <h class="str">=</h> <h class="lbr">1</h>; i <h class="str"><=</h> height; i<h class="str">++</h>) { </h></p>
-    <p><h><h class="str">for </h>(j <h class="str">=</h> <h class="lbr">1</h>; j <h class="str"><=</h> <h class="lbr">2</h> * height - <h class="lbr">1</h><h>; j</h>++<h>) {</h></h></p>
-    <p><h><h class="str">if </h>(j <h class="str">==</h> height <h class="str">-</h> i <h class="str">+</h> <h class="lbr">1</h> <h class="str">||</h> j <h class="str">==</h> height <h class="str">+</h> i <h class="str">-</h> <h class="lbr">1</h> <h class="str">||</h> i <h class="str">==</h> height) {</h></p>
-    <p><h><h class="cmd">printf</h>(<h class="txt">"*"</h>);</h></p>
-    <p><h>} <h class="str">else</h> {</h></p>    
-    <p><h><h class="cmd">printf</h>(<h class="txt">" "</h>);</h></p>
-    <p><h>}</h></p>
-    <p><h>}</h></p>
-    <p><h><h class="cmd">printf</h>(<h class="txt">"<h class="lbr">\n</h>"</h>);</h></p>
-    <p><h>}</h></p>    
-    <p><h><h class="str">return</h> <h class="lbr">0</h>;</h></p>    
-    <p><h>}</h></p>
-    </div>
-</div>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int height, i, j;
+    printf("Nhap chieu cao cua tam giac: ");
+    scanf("%d", &height);
+    for (i = 1; i = height; i++) {
+        for (j = 1; j = 2 * height - 1; j++) {
+            if (j == height - i + 1 || j == height + i - 1 || i == height) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+
 <div class="code-content">def</div>

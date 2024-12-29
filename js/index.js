@@ -62,6 +62,12 @@ document
         let response = await fetch(`./data/answer/${part}/${question}.html`);
         if (response.ok) {
           answerContainer.innerHTML = await response.text();
+          Prism.highlightAll();
+          // add attribute style="background-color: rgb(65, 65, 65)" for tag pre inside answer-container
+          const pres = answerContainer.querySelectorAll("pre");
+          pres.forEach((pre) => {
+            pre.style.backgroundColor = "rgb(65, 65, 65)";
+          });
         } else {
           answerContainer.innerHTML = `<p class="loading">Answer not found</p>`;
         }
