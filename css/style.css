@@ -204,6 +204,41 @@ body {
   text-align: center;
 }
 
+.image-header-meo {
+  width: 10px;
+}
+
+.image-header-meo img {
+  width: 100px;
+  margin-bottom: 110px;
+  margin-left: 330px;
+}
+
+.image-header-phao img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.image-header-bung {
+  width: 10px;
+}
+
+.image-header-bung img {
+  width: 100px;
+  margin-bottom: 110px;
+  margin-left: 500px;
+}
+
+.image-header-bung-bung {
+  width: 10px;
+}
+
+.image-header-bung-bung img {
+  width: 100px;
+  margin-bottom: 110px;
+  margin-left: 140px;
+}
+
 /* main */
 .main-content {
   display: flex;
@@ -294,7 +329,8 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fbf7f4;
-  min-height: 15rem;
+  min-height: 10rem;
+  font-size: 1.3rem;
 }
 .logo img {
   width: 17%;
