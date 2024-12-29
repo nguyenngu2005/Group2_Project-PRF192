@@ -14,20 +14,20 @@ body {
   font-size: 1.6rem;
 }
 
-.container {
+.main-content {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Đảm bảo rộng toàn màn hình */
+  width: 100%;
   height: 100%;
-  margin: 0; /* Xóa khoảng cách ngoài */
-  padding: 0; /* Xóa đệm trong */
+  margin: 0;
+  padding: 0;
   background-color: #fbf7f4;
   border: 1px solid #ccc;
   border-radius: 0;
 }
 
 .left-panel {
-  width: 40%; /* Tăng độ rộng nếu cần */
+  width: 20%;
   padding: 1rem;
   background-color: #fff;
   border-right: 1px solid #ddd;
@@ -35,29 +35,29 @@ body {
 }
 
 .right-panel {
-  width: 60%; /* Tăng độ rộng nếu cần */
+  width: 100%;
   padding: 1rem;
   background-color: #fff;
   text-align: left;
 }
 
 .separator {
-  width: 1%; /* Điều chỉnh độ rộng separator nếu muốn */
+  width: 1%;
   background-color: #f4a261;
   height: auto;
   margin: 0;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 @media screen and (max-width: 767.98px) {
   .container {
     flex-direction: column;
-    padding: 1rem; /* Đệm nhỏ trên màn hình nhỏ */
+    padding: 1rem;
   }
 
   .left-panel, .right-panel {
     flex: none;
-    width: 100%; /* Đảm bảo chiếm đủ chiều rộng */
+    width: 100%;
     border-right: none;
   }
 }
