@@ -156,7 +156,6 @@ body {
 .content-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: #fbf7f4;
 }
 
