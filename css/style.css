@@ -14,31 +14,31 @@ body {
   font-size: 1.6rem;
 }
 /*header*/
-.content-header{
+.content-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #fbf7f4;
-  
 }
-.left-header img{
+.left-header img {
   width: 100%;
 }
-.logo-header img{
-  margin-top:40px;
+.logo-header img {
+  margin-top: 40px;
   width: 80%;
-  margin-left:10%;
+  margin-left: 10%;
 }
-.right-header img{
+.right-header img {
   width: 50%;
-  margin-left:47%;
+  margin-left: 47%;
 }
 form {
   display: flex;
-  margin-top:15%;
+  margin-top: 15%;
 }
 
 form input {
-  height:10%;
+  height: 10%;
   width: 500px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -78,21 +78,23 @@ form button {
   font-size: 13px;
   margin-top: 13px;
 }
+
 @media screen and (max-width: 767.98px) {
-  .content-header{
-    display:block;
+  /* header */
+  .content-header {
+    display: block;
     background: #fbf7f4;
     align-items: center;
   }
-  .left-header img{
+  .left-header img {
     width: 0%;
   }
-  .logo-header img{
-    margin-top:20px;
+  .logo-header img {
+    margin-top: 20px;
     width: 50%;
-    margin-left:30%;
+    margin-left: 30%;
   }
-  .right-header img{
+  .right-header img {
     width: 0%;
   }
   form {
