@@ -15,91 +15,130 @@ body {
 }
 /*theme Tet*/
 @-webkit-keyframes flowers-fall {
-  0% {top:-10%}
-  100% {top:100%}
+  0% {
+    top: -10%;
   }
-  @-webkit-keyframes flowers-shake {
-  0%,100% {-webkit-transform:translateX(0);transform:translateX(0)}
-  50% {-webkit-transform:translateX(80px);transform:translateX(80px)}
+  100% {
+    top: 100%;
   }
-  @keyframes flowers-shake {
-  0%,100%{ transform:translateX(0)}
-  50% {transform:translateX(80px)}
+}
+@-webkit-keyframes flowers-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
-  .flower {
-  height:auto;
-  width:30px;/*chinh kich thuoc hoa*/
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+}
+@keyframes flowers-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+}
+.flower {
+  height: auto;
+  width: 30px; /*chinh kich thuoc hoa*/
   text-shadow: 0 0 5px #000;
-  position:fixed;
-  top:-10%;
-  z-index:9999;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  cursor:default;
-  -webkit-animation-name:flowers-fall,flowers-shake;
-  -webkit-animation-duration:10s,3s;
-  -webkit-animation-timing-function:linear,ease-in-out;
-  -webkit-animation-iteration-count:infinite,infinite;
-  -webkit-animation-play-state:running,running;
-  animation-name:flowers-fall,flowers-shake;
-  animation-duration:10s,3s;
-  animation-timing-function:linear,ease-in-out;
-  animation-iteration-count:infinite,infinite;
-  animation-play-state:running,running;
-  }
-  .flower:nth-of-type(0){
-  left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
-  }
-  .flower:nth-of-type(1){
-  left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
-  }
-  .flower:nth-of-type(2){
-  left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
-  }
-  .flower:nth-of-type(3){
-  left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
-  }
-  .flower:nth-of-type(4){
-  left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
-  }
-  .flower:nth-of-type(5){
-  left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
-  }
-  .flower:nth-of-type(6){
-  left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
-  }
-  .flower:nth-of-type(7){
-  left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
-  }
-  .flower:nth-of-type(8){
-  left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
-  }
-  .flower:nth-of-type(9){
-  left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
-  }
-  .flower:nth-of-type(10){
-  left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
-  }
-  .flower:nth-of-type(11){
-  left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
-  }
-  
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: flowers-fall, flowers-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: flowers-fall, flowers-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.flower:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.flower:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.flower:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.flower:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.flower:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.flower:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.flower:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.flower:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.flower:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.flower:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+.flower:nth-of-type(10) {
+  left: 25%;
+  -webkit-animation-delay: 2s, 0s;
+  animation-delay: 2s, 0s;
+}
+.flower:nth-of-type(11) {
+  left: 65%;
+  -webkit-animation-delay: 4s, 2.5s;
+  animation-delay: 4s, 2.5s;
+}
+
 /*header*/
-.content-header{
+.content-header {
   display: flex;
   justify-content: space-between;
-  background: #fbf7f4;  
+  background: #fbf7f4;
 }
-.mid-header{
+.mid-header {
   display: flex;
   align-items: center;
 }
-.left-header img{
-  
+.left-header img {
 }
-.logo-header img{ 
+.logo-header img {
   height: 100px;
   width: 350px;
   background-repeat: no-repeat;
@@ -109,30 +148,30 @@ body {
   background-size: 350px 100px;
   margin-right: 10px;
 }
-.right-header img{
-  
+.right-header img {
 }
-form {
+.form-header {
   display: flex;
 }
 
-form input {
-  height:30px;
+.form-header input {
+  height: 30px;
   width: 350px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 32px;
 }
 
-form button {
+.form-header button {
   height: 30px;
   margin-left: 10px;
   background-color: orange;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 10px;
   font-weight: bold;
+  text-align: center;
 }
 
 /*footer*/
@@ -159,20 +198,20 @@ form button {
 }
 
 @media screen and (max-width: 767.98px) {
-  .content-header{
+  .content-header {
     background: #fbf7f4;
   }
-  .mid-header{
-    display: list-item ;
+  .mid-header {
+    display: list-item;
     list-style: none;
   }
-  .left-header img{
+  .left-header img {
     width: 0%;
   }
-  .logo-header img{
+  .logo-header img {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left:70px;
+    margin-left: 70px;
     margin-right: 0px;
     height: 60px;
     width: 270px;
@@ -182,8 +221,7 @@ form button {
     vertical-align: middle;
     background-size: 270px 90px;
   }
-  .right-header img{
+  .right-header img {
     width: 0%;
   }
-  
 }
