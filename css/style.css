@@ -21,6 +21,119 @@ body {
   padding: 0;
 }
 
+/*theme Tet*/
+@-webkit-keyframes flowers-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes flowers-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+}
+@keyframes flowers-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+}
+.flower {
+  height: auto;
+  width: 30px; /*chinh kich thuoc hoa*/
+  text-shadow: 0 0 5px #000;
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: flowers-fall, flowers-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: flowers-fall, flowers-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.flower:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.flower:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.flower:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.flower:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.flower:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.flower:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.flower:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.flower:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.flower:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.flower:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+.flower:nth-of-type(10) {
+  left: 25%;
+  -webkit-animation-delay: 2s, 0s;
+  animation-delay: 2s, 0s;
+}
+.flower:nth-of-type(11) {
+  left: 65%;
+  -webkit-animation-delay: 4s, 2.5s;
+  animation-delay: 4s, 2.5s;
+}
+
 /*header*/
 .content-header {
   display: flex;
@@ -28,21 +141,25 @@ body {
   align-items: center;
   background: #fbf7f4;
 }
+.mid-header {
+  display: flex;
+  align-items: center;
+}
 .left-header img {
   width: 100%;
 }
 .logo-header img {
-  margin-top: 40px;
-  width: 80%;
-  margin-left: 10%;
-}
-.right-header img {
-  width: 50%;
-  margin-left: 47%;
+  height: 100px;
+  width: 350px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 350px 100px;
+  margin-right: 10px;
 }
 .form-header {
   display: flex;
-  margin-top: 15%;
 }
 
 .form-header input {
@@ -50,7 +167,7 @@ body {
   width: 500px;
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 32px;
 }
 
 .form-header button {
@@ -59,9 +176,10 @@ body {
   background-color: orange;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 7px;
+  border-radius: 10px;
+  padding: 5px 10px;
   font-weight: bold;
+  text-align: center;
 }
 
 /*footer*/
@@ -92,7 +210,10 @@ body {
   .content-header {
     display: block;
     background: #fbf7f4;
-    align-items: center;
+  }
+  .mid-header {
+    display: list-item;
+    list-style: none;
   }
   .left-header img {
     width: 0%;
@@ -101,31 +222,44 @@ body {
     margin-top: 20px;
     width: 50%;
     margin-left: 30%;
-  }
-  .right-header img {
-    width: 0%;
-  }
-  form {
-    margin-left: 10%;
-    display: flex;
-    margin-top: 20px;
-  }
-  form input {
-    height: 10%;
-    width: 500px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+    .logo-header img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 70px;
+      margin-right: 0px;
+      height: 60px;
+      width: 270px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      line-height: 30px;
+      vertical-align: middle;
+      background-size: 270px 90px;
+    }
+    .right-header img {
+      width: 0%;
+    }
+    form {
+      margin-left: 10%;
+      display: flex;
+      margin-top: 20px;
+    }
+    form input {
+      height: 10%;
+      width: 500px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-  form button {
-    height: 10%;
-    margin-left: 10px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 7px;
-    font-weight: bold;
+    form button {
+      height: 10%;
+      margin-left: 10px;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 7px;
+      font-weight: bold;
+    }
   }
 }
