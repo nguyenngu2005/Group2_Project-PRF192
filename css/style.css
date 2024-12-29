@@ -191,6 +191,7 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 32px;
+  font-size: 1.6rem;
 }
 .form-header button {
   height: 10%;
