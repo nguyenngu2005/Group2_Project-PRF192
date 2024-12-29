@@ -15,8 +15,8 @@
   <body>
     <!-- html -->
     <div class="container">
-       <!--Tet holiday theme-->
-     <div class="flowers" aria-hidden="true">
+      <!--Tet holiday theme-->
+      <div class="flowers" aria-hidden="true">
       <div class="flower"><img src="./img/hoamai1.png"/></div>
       <div class="flower"><img src="./img/hoamai2.png"/> </div>
       <div class="flower"><img src="./img/hoamai1.png"/> </div>
@@ -30,13 +30,36 @@
       <div class="flower"> <img src="./img/hoamai3.png"/></div>
       <div class="flower"><img src="./img/hoamai2.png"/> </div>
       </div>
-     <!--finish Tet holiday theme-->
+      <!--finish Tet holiday theme-->
       <header>
-        <div class="content-header">
-          <!--content left-->
-            <div class="left-header">
-              <img src="./img/header-left.png" width="248" height="122"></img>
+          <div class="content-header">
+            <!--content left-->
+              <div class="left-header">
+                <img src="./img/header-left.png" width="248" height="122"></img>
+              </div>
+            <!--finish content left-->
+            <div class="mid-header">
+            <!--logo-->
+            <div class="logo-header">
+              <img src="img/header-logo.png" ></img>
             </div>
+            <!--finish logo-->
+      
+            <!--search-->
+            <div class="search-header">
+              <form class="form-header">
+                <input 
+                  id="filter"
+                  type="text"
+                  class="form-control me-3 border border-black border-1"
+                  placeholder="Search in website"
+                />
+                <button id="btnSearch" type="button">Search</button>
+              </form>
+            </div> 
+            <!--finish search-->
+            </div>
+ header
           <!--finish content left-->
           <div class="mid-header">
           <!--logo-->
@@ -81,61 +104,74 @@
           </div> 
           <!--finish search-->
           </div>
+main
 
-          <!--content right-->
-          <div class="right-header">
-            <img src="img/header-right.png" width="210" height="200"></img>
+            <!--content right-->
+            <div class="right-header">
+              <img src="img/header-right.png" width="210" height="200"></img>
+            </div>
+            <!--finish content right-->
+      </header>
+      <main style="min-height: 100vh;">
+        <!-- main-content -->
+        <div class="main-content">
+          <!-- Right side content: questions -->
+          <div class="left-panel">
+            <div class="part" data-target="part1">Vẽ tam giác cân rỗng</div>
+            <div id="part1" class="questions">
+              <div class="question" data-part="part1" data-question="question1">
+                Cách 1
+              </div>
+              <div class="question" data-part="part1" data-question="question2">
+                Cách 2
+              </div>
+              <div class="question" data-part="part1" data-question="question3">
+                Cách 3
+              </div>
+            </div>
+  
+            <div class="part" data-target="part2">Part 2</div>
+            <div id="part2" class="questions">
+              <div class="question" data-part="part2" data-question="question1">
+                Q1:
+              </div>
+              <div class="question" data-part="part2" data-question="question2">
+                Q2:
+              </div>
+            </div>
           </div>
-          <!--finish content right-->
-    </header>
-    <main>
-      <!-- main-content -->
-      <div class="main-content" style="padding: 3rem">
-        <!-- Right side content: questions -->
-        <div class="left-panel">
-          <h3>Part 1</h3>
-          <p>Q1: </p>
-          <p>Q2: </p>
-          
-          <h3>Part 2</h3>
-          <p>Q1: </p>
-          <p>Q2: </p>
+          <div class="separator"></div>
+          <!-- Left side content: answers -->
+          <div class="right-panel">
+            <div id="answer-container" class="answer">
+              <p class="loading">Select a question to display answer...</p>
+            </div>
+          </div>
         </div>
-        
-        <div class="separator"></div>
-        <!-- Left side content: answers -->
-        <div class="right-panel">
-          <h3>Đáp án</h3>
-          <p></p>
-          <p></p>
-          
-          <p></p>
-          <p></p>
+      </main>
+      <footer>
+        <div class="footer-content"> <!--This is footer begin-->
+          <p class="logo"> <!--Logo-->
+            <img src="./img/Logo.jpg"></img>
+          </p>
+          <p class="mid-footer"> <!--mid-footer-->  
+            <b>Project made of Group 2 </b> <br>
+              If you have any question please contact: <br>
+            <b>Email: tduc01234@gmail.com</b>
+          </p>
+          <p class="right-footer"> <!--right-footer-->
+            <b>Made of with: </b> <br>
+                Trang Thuận Đức -
+                Nguyễn Tấn Phát <br>
+                Đỗ Hồ Gia Huy -
+                Nguyễn Trường Sơn -
+                Nguyễn Nguyên Ngữ <br>
+                Nguyễn Xuân Đăng Khoa -
+                Đinh Khánh Thành Trung 
+          </p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-content"> <!--This is footer begin-->
-        <p class="logo"> <!--Logo-->
-          <img src="./img/Logo.jpg"></img>
-        </p>
-        <p class="mid-footer"> <!--mid-footer-->  
-          <b>Project made of Group 2 </b> <br>
-            If you have any question please contact: <br>
-          <b>Email: tduc01234@gmail.com</b>
-        </p>
-        <p class="right-footer"> <!--right-footer-->
-          <b>Made of with: </b> <br>
-              Trang Thuận Đức -
-              Nguyễn Tấn Phát <br>
-              Đỗ Hồ Gia Huy -
-              Nguyễn Trường Sơn -
-              Nguyễn Nguyên Ngữ <br>
-              Nguyễn Xuân Đăng Khoa -
-              Đinh Khánh Thành Trung 
-        </p>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <!-- end html -->
 
     <!-- js -->

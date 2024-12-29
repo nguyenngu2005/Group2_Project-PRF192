@@ -71,12 +71,17 @@ document
     }
   });
 
+//chặn sự kiện reset tag .form-header
+document.querySelector(".form-header").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
 /**Chức năng search theo tên part hoặc tên question
  * Khi tìm thấy tên part sẽ hiện list part đó gồm các câu bên trong
  * Nếu chỉ tìm thấy tên question thì sẽ hiện part chứa question đó và chỉ question đó, ẩn các question khác trong part
  */
-document.querySelector("#filter").addEventListener("keyup", (event) => {
-  let inputValue = event.target.value;
+
+const searchFunction = (inputValue) => {
   if (inputValue.trim()) {
     let parts = document.querySelectorAll(".part");
     let questions = document.querySelectorAll(".question");
@@ -109,4 +114,14 @@ document.querySelector("#filter").addEventListener("keyup", (event) => {
   } else {
     init();
   }
+};
+
+document.querySelector("#filter").addEventListener("keyup", (event) => {
+  let inputValue = event.target.value;
+  searchFunction(inputValue);
+});
+
+document.querySelector("#btnSearch").addEventListener("click", (event) => {
+  let inputValue = document.querySelector("#filter").value;
+  searchFunction(inputValue);
 });
