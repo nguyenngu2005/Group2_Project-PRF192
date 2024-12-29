@@ -13,6 +13,14 @@ html {
 body {
   font-size: 1.6rem;
 }
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
 /*theme Tet*/
 @-webkit-keyframes flowers-fall {
   0% {
@@ -126,10 +134,12 @@ body {
   animation-delay: 4s, 2.5s;
 }
 
-/*header*/
+/* header */
+
 .content-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #fbf7f4;
 }
 .mid-header {
@@ -137,6 +147,7 @@ body {
   align-items: center;
 }
 .left-header img {
+  width: 100%;
 }
 .logo-header img {
   height: 100px;
@@ -148,22 +159,21 @@ body {
   background-size: 350px 100px;
   margin-right: 10px;
 }
-.right-header img {
-}
+
 .form-header {
   display: flex;
 }
 
 .form-header input {
-  height: 30px;
-  width: 350px;
+  height: 10%;
+  width: 500px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 32px;
 }
 
 .form-header button {
-  height: 30px;
+  height: 10%;
   margin-left: 10px;
   background-color: orange;
   color: white;
@@ -198,7 +208,9 @@ body {
 }
 
 @media screen and (max-width: 767.98px) {
+  /* header */
   .content-header {
+    display: block;
     background: #fbf7f4;
   }
   .mid-header {
@@ -223,5 +235,28 @@ body {
   }
   .right-header img {
     width: 0%;
+  }
+  .form-header {
+    margin-left: 10%;
+    display: flex;
+    margin-top: 20px;
+  }
+  .form-header input {
+    height: 10%;
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-header button {
+    height: 10%;
+    margin-left: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: bold;
   }
 }
