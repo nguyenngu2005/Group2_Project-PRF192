@@ -171,15 +171,12 @@ body {
   align-items: center;
 }
 
-.mid-right-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 20rem;
+.mid-right-header img {
+  width: 10rem;
 }
 
-.mid-right-header img {
-  width: 100px;
+.phao-header img {
+  width: 10rem;
 }
 
 .logo-header img {
@@ -362,10 +359,10 @@ body {
     display: list-item;
     list-style: none;
   }
-  .left-header img,
-  .right-header img,
-  .mid-right-header img,
-  .right-header {
+  .left-header,
+  .right-header,
+  .mid-right-header,
+  .phao-header {
     display: none;
   }
   .mid-left-header {
