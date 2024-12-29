@@ -376,3 +376,7 @@ body {
     font-weight: bold;
   }
 }
+
+.box code {
+  border-style: solid; border-width: 2px;
+}
