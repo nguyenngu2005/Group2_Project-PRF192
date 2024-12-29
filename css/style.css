@@ -263,6 +263,7 @@ body {
 .part:hover,
 .question:hover {
   background-color: #cab4a2;
+  color: white;
 }
 
 .part.clicked,
