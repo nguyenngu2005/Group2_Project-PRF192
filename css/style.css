@@ -193,12 +193,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  border: #f4a261 3px solid;
+  border-radius: 3px;
 }
 
 .left-panel {
   width: 25%;
-  padding: 1rem;
-  background-color: #fff;
+  min-height: 100vh;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: #fbf7f4;
   border-right: 1px solid #ddd;
   text-align: left;
 }
