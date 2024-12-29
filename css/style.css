@@ -310,6 +310,18 @@ body {
 }
 
 @media screen and (max-width: 767.98px) {
+  /* main */
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-panel,
+  .right-panel {
+    flex: none;
+    width: 100%;
+    border-right: none;
+  }
   /* header */
   .content-header {
     display: block;
@@ -327,7 +339,7 @@ body {
     margin-bottom: 20px;
     margin-left: 70px;
     margin-right: 0px;
-    height: auto;
+    height: 60px;
     width: 270px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -351,6 +363,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
   .form-header button {
     height: 10%;
     margin-left: 10px;
@@ -360,17 +373,5 @@ body {
     border-radius: 5px;
     padding: 7px;
     font-weight: bold;
-  }
-
-  /* main */
-  .main-content {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  .left-panel,
-  .right-panel {
-    flex: none;
-    width: 100%;
-    border-right: none;
   }
 }
