@@ -142,13 +142,17 @@ body {
   align-items: center;
   background: #fbf7f4;
 }
+
 .mid-header {
   display: flex;
   align-items: center;
 }
-.left-header img {
+
+.left-header img,
+.right-header img {
   width: 100%;
 }
+
 .logo-header img {
   height: 100px;
   width: 350px;
@@ -163,7 +167,6 @@ body {
 .form-header {
   display: flex;
 }
-
 .form-header input {
   height: 10%;
   width: 500px;
@@ -171,7 +174,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 32px;
 }
-
 .form-header button {
   height: 10%;
   margin-left: 10px;
@@ -182,6 +184,15 @@ body {
   padding: 5px 10px;
   font-weight: bold;
   text-align: center;
+}
+
+/*main*/
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 /*footer*/
