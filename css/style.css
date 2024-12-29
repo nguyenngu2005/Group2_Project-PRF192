@@ -186,7 +186,7 @@ body {
   text-align: center;
 }
 
-/*main*/
+/* main */
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -222,19 +222,6 @@ body {
   border-radius: 1px;
 }
 
-@media screen and (max-width: 767.98px) {
-  .container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .left-panel, .right-panel {
-    flex: none;
-    width: 100%;
-    border-right: none;
-  }
-}
-
 /*footer*/
 .footer-content {
   display: flex;
@@ -259,6 +246,17 @@ body {
 }
 
 @media screen and (max-width: 767.98px) {
+  /* main */
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-panel, .right-panel {
+    flex: none;
+    width: 100%;
+    border-right: none;
+  }
   /* header */
   .content-header {
     display: block;
