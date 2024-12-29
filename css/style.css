@@ -160,14 +160,26 @@ body {
   background: #fbf7f4;
 }
 
-.mid-header {
-  display: flex;
-  align-items: center;
-}
-
 .left-header img,
 .right-header img {
   width: 100%;
+}
+
+.mid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mid-right-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 20rem;
+}
+
+.mid-right-header img {
+  width: 100px;
 }
 
 .logo-header img {
@@ -188,7 +200,7 @@ body {
 
 .form-header input {
   height: 10%;
-  width: 500px;
+  width: 27rem;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 32px;
@@ -197,7 +209,6 @@ body {
 
 .form-header button {
   height: 10%;
-  margin-left: 10px;
   background-color: orange;
   color: white;
   border: none;
@@ -207,44 +218,6 @@ body {
   text-align: center;
 }
 
-.set-than-tai {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  min-width: 20%;
-  top: 0;
-  left: 50%;
-  transform: translate(-75%, 0);
-}
-
-.image-header-meo {
-  width: 10px;
-}
-
-.image-header-meo img {
-  width: 100px;
-}
-
-.image-header-phao img {
-  width: 100px;
-}
-
-.image-header-bung {
-  width: 10px;
-}
-
-.image-header-bung img {
-  width: 100px;
-}
-
-.image-header-bung-bung {
-  width: 10px;
-}
-
-.image-header-bung-bung img {
-  width: 100px;
-}
 /* finish header */
 
 /* main-content */
@@ -395,7 +368,7 @@ body {
   }
   .form-header input {
     height: 10%;
-    width: 500px;
+    width: 20rem;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -403,7 +376,6 @@ body {
 
   .form-header button {
     height: 10%;
-    margin-left: 10px;
     background-color: orange;
     color: white;
     border: none;
