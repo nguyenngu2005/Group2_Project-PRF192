@@ -183,6 +183,7 @@ body {
 
 .form-header {
   display: flex;
+  align-items: center;
 }
 .form-header input {
   height: 10%;
@@ -353,6 +354,7 @@ body {
     margin-left: 10%;
     display: flex;
     margin-top: 20px;
+    align-items: center;
   }
   .form-header input {
     height: 10%;

@@ -76,6 +76,7 @@ document
  * Nếu chỉ tìm thấy tên question thì sẽ hiện part chứa question đó và chỉ question đó, ẩn các question khác trong part
  */
 document.querySelector("#filter").addEventListener("keyup", (event) => {
+  event.preventDefault();
   let inputValue = event.target.value;
   if (inputValue.trim()) {
     let parts = document.querySelectorAll(".part");
