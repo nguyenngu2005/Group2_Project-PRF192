@@ -186,6 +186,15 @@ body {
   text-align: center;
 }
 
+/*main*/
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
 /*footer*/
 .footer-content {
   display: flex;
