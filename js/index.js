@@ -62,12 +62,13 @@ document
         let response = await fetch(`./data/answer/${part}/${question}.html`);
         if (response.ok) {
           answerContainer.innerHTML = await response.text();
-          answerContainer.querySelectorAll("pre").forEach((pre) => {
+          const pres = answerContainer.querySelectorAll("pre");
+          pres.forEach((pre) => {
             pre.querySelector("code").classList.add("language-c");
           });
           Prism.highlightAll();
           // add attribute style="background-color: rgb(65, 65, 65)" for tag pre inside answer-container
-          answerContainer.querySelectorAll("pre").forEach((pre) => {
+          pres.forEach((pre) => {
             pre.style.backgroundColor = "rgb(65, 65, 65)";
           });
         } else {
