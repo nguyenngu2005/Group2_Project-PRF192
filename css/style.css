@@ -207,19 +207,27 @@ body {
   text-align: center;
 }
 
+.set-than-tai {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  min-width: 20%;
+  top: 0;
+  left: 50%;
+  transform: translate(-75%, 0);
+}
+
 .image-header-meo {
   width: 10px;
 }
 
 .image-header-meo img {
   width: 100px;
-  margin-bottom: 110px;
-  margin-left: 330px;
 }
 
 .image-header-phao img {
   width: 100px;
-  margin-right: 20px;
 }
 
 .image-header-bung {
@@ -228,8 +236,6 @@ body {
 
 .image-header-bung img {
   width: 100px;
-  margin-bottom: 110px;
-  margin-left: 500px;
 }
 
 .image-header-bung-bung {
@@ -238,8 +244,6 @@ body {
 
 .image-header-bung-bung img {
   width: 100px;
-  margin-bottom: 110px;
-  margin-left: 140px;
 }
 /* finish header */
 
