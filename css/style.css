@@ -407,3 +407,36 @@ body {
 
   /*finish footer*/
 }
+
+.code-box {
+  width: 100%;
+  height: 320px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: black;
+}
+.cd-bx{
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 17px;
+}
+.code-box p{
+  line-height: 8px;
+  color: white;
+}
+.str{
+  color: #C27230;
+}
+.vrb{
+  color: white;
+}
+.lbr{
+  color: #6792B3;
+}
+.cmd{
+  color:#B83426;
+}
+.txt{
+  color: #A5C261;
+}
