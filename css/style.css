@@ -193,6 +193,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #fbf7f4;
   border: #f4a261 3px solid;
   border-radius: 3px;
 }
@@ -200,17 +201,24 @@ body {
 .left-panel {
   width: 25%;
   min-height: 100vh;
+  max-height: 100vh;
   padding: 1rem 1rem 1rem 3rem;
-  background-color: #fbf7f4;
   border-right: 1px solid #ddd;
   text-align: left;
 }
 
 .right-panel {
   width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
   padding: 1rem;
   background-color: #fff;
   text-align: left;
+}
+
+.left-panel,
+.right-panel {
+  overflow-y: auto;
 }
 
 .separator {
