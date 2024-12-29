@@ -262,12 +262,13 @@ body {
 
 .part:hover,
 .question:hover {
-  background-color: rgb(212, 253, 253);
+  background-color: #cab4a2;
 }
 
 .part.clicked,
 .question.clicked {
-  background-color: cyan;
+  background-color: #a57e69;
+  color: white;
 }
 
 .part.active,
