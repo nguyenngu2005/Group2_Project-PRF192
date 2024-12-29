@@ -22,12 +22,29 @@ body {
 }
 
 /*theme Tet*/
+@keyframes flowers-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
 @-webkit-keyframes flowers-fall {
   0% {
     top: -10%;
   }
   100% {
     top: 100%;
+  }
+}
+@keyframes flowers-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
   }
 }
 @-webkit-keyframes flowers-shake {
