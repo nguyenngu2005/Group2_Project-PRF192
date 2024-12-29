@@ -319,12 +319,34 @@ body {
 }
 
 .mid-footer {
-  margin-top: 20px;
+  text-align: center;
+}
+.logo-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px 0; 
+}
+.logo {
+  margin: 0 20px; 
+}
+
+.logo-img {
+  width: 7rem;
+  margin-left: 12%;
+  margin-top: 13px;
+}
+
+.logo-img1 {
+  width: 6rem;
+  margin-left: 12%;
+  margin-top: 13px;
 }
 
 .right-footer {
   margin-top: 13px;
 }
+
 /*finish footer*/
 
 @media screen and (max-width: 767.98px) {
