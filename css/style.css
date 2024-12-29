@@ -14,7 +14,7 @@ body {
   font-size: 1.6rem;
 }
 
-.container {
+.main_content {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -54,6 +54,7 @@ body {
     flex-direction: column;
     padding: 1rem;
   }
+}
 
   .left-panel, .right-panel {
     flex: none;
