@@ -135,7 +135,6 @@ body {
 }
 
 /* header */
-
 .content-header {
   display: flex;
   justify-content: space-between;
@@ -194,9 +193,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #fbf7f4;
-  border: 1px solid #ccc;
-  border-radius: 0;
 }
 
 .left-panel {
@@ -227,7 +223,6 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fbf7f4;
-  margin-top: 100%;
   min-height: 110px;
 }
 .logo img {
