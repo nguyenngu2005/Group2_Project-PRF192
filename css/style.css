@@ -293,7 +293,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fbf7f4;
-  min-height: 110px;
+  min-height: 15rem;
 }
 .logo img {
   width: 17%;
@@ -301,12 +301,10 @@ body {
   margin-top: 13px;
 }
 .mid-footer {
-  font-size: 13px;
   margin-right: 15%;
   margin-top: 20px;
 }
 .right-footer {
-  font-size: 13px;
   margin-top: 13px;
 }
 
