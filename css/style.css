@@ -157,7 +157,7 @@ body {
 .content-header {
   display: flex;
   justify-content: space-between;
-  background: #fbf7f4;
+  background: #ffeee4;
 }
 
 .left-header img,
@@ -226,7 +226,6 @@ body {
   padding: 0;
   background-color: #fbf7f4;
   border: #f4a261 3px solid;
-  border-radius: 3px;
 }
 
 .left-panel {
@@ -234,10 +233,6 @@ body {
   min-height: 100vh;
   max-height: 100vh;
   text-align: left;
-}
-
-.left-panel > div {
-  width: 100%;
 }
 
 .right-panel {
@@ -288,7 +283,7 @@ body {
 .part:hover,
 .question:hover {
   background-color: #e2dfdc;
-  color: white;
+  color: black;
   transition: all 0.15s ease-in-out;
 }
 
@@ -320,46 +315,73 @@ body {
   background-color: #fbf7f4;
   min-height: 10rem;
   font-size: 1.3rem;
+  padding: 1.3rem 0 0 0;
 }
 
-.logo-footer img {
+.left-footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -1rem;
+}
+
+.left-footer img {
   width: 7rem;
-  margin-left: 12%;
-  margin-top: 13px;
 }
 
 .mid-footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.logo-container {
+
+.mid-bottom-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-}
-.logo {
-  margin: 0 20px;
 }
 
-.logo-img {
-  width: 7rem;
-  margin-left: 12%;
-  margin-top: 13px;
+.mid-bottom-footer img {
+  width: 3rem;
+  margin: 2px 1rem;
 }
 
-.logo-img1 {
-  width: 6rem;
-  margin-left: 12%;
-  margin-top: 13px;
-}
-
-.right-footer {
-  margin-top: 13px;
+.contact {
+  font-weight: bold;
 }
 
 /*finish footer*/
 
+/* footer v2 */
+.footer-content-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #fbf7f4; */
+  background-color: #282a35;
+  color: #d6d6d7;
+}
+
+.logo-top-footer-v2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-top-footer-v2 img {
+  width: 3rem;
+  margin: 2px 1rem;
+}
+
+.bottom-footer-v2 {
+  text-align: center;
+}
+/* finish footer v2 */
+
 @media screen and (max-width: 767.98px) {
+  /* reset */
+  body {
+    font-size: 1.4rem;
+  }
   /* header */
   .content-header {
     display: block;
@@ -425,21 +447,19 @@ body {
   .main-content {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    border-radius: 0%;
+  }
+  .left-panel {
+    min-height: auto;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  .right-panel {
+    border: 0px;
   }
   .left-panel,
   .right-panel {
     width: 100%;
-    border-right: none;
-  }
-  .left-panel {
-    padding: 0;
-    min-height: auto;
-    overflow-y: hidden;
-  }
-  .part,
-  .question {
-    border-radius: 1rem;
   }
   /* finish main-content */
 
