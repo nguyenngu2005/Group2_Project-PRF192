@@ -320,41 +320,43 @@ body {
   background-color: #fbf7f4;
   min-height: 10rem;
   font-size: 1.3rem;
+  padding: 1.3rem 0 0 0;
 }
 
-.logo-footer img {
+.left-footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -1rem;
+}
+
+.left-footer img {
   width: 7rem;
-  margin-left: 12%;
-  margin-top: 13px;
 }
 
 .mid-footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.logo-container {
+
+.mid-bottom-footer {
+  position: relative;
+  top: -1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-}
-.logo {
-  margin: 0 20px;
 }
 
-.logo-img {
-  width: 7rem;
-  margin-left: 12%;
-  margin-top: 13px;
+.contact {
+  font-weight: bold;
 }
 
-.logo-img1 {
+.logo-mid-left-footer img {
+  width: 7.5rem;
+}
+
+.logo-mid-right-footer img {
   width: 6rem;
-  margin-left: 12%;
-  margin-top: 13px;
-}
-
-.right-footer {
-  margin-top: 13px;
 }
 
 /*finish footer*/
