@@ -288,7 +288,7 @@ body {
 .part:hover,
 .question:hover {
   background-color: #e2dfdc;
-  color: white;
+  color: black;
   transition: all 0.15s ease-in-out;
 }
 
