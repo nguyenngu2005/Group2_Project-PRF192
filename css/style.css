@@ -322,13 +322,13 @@ body {
   text-align: center;
 }
 .logo-container {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  margin: 20px 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 .logo {
-  margin: 0 20px; 
+  margin: 0 20px;
 }
 
 .logo-img {
