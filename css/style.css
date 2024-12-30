@@ -369,22 +369,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -1.2rem;
 }
 
-.logo-top-left-footer img {
-  width: 5rem;
-}
-
-.logo-top-right-footer img {
-  width: 4rem;
+.logo-top-footer-v2 img {
+  width: 3rem;
+  margin: 2px 1rem;
 }
 
 .bottom-footer-v2 {
   text-align: center;
-  position: relative;
-  top: -2.2rem;
 }
 /* finish footer v2 */
 
