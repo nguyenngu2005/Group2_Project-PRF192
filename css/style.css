@@ -318,6 +318,12 @@ body {
   padding: 1.3rem 0 0 0;
 }
 
+
+.logo img {
+  width: 20%;
+  margin-left: 12%;
+  margin-top: 13px;
+}
 .left-footer {
   display: flex;
   align-items: center;
