@@ -239,9 +239,10 @@ body {
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
+  padding: 1rem;
   background-color: #fff;
-  text-align: left;
   border-left: 5px solid #f4a261;
+  text-align: left;
 }
 
 .left-panel,
@@ -296,10 +297,6 @@ body {
 .part.active,
 .question.active {
   display: block;
-}
-
-.answer {
-  padding: 1rem;
 }
 
 .loading {
