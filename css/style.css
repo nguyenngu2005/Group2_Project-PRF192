@@ -236,10 +236,6 @@ body {
   text-align: left;
 }
 
-.left-panel > div {
-  width: 100%;
-}
-
 .right-panel {
   width: 100%;
   min-height: 100vh;
@@ -362,6 +358,10 @@ body {
 /*finish footer*/
 
 @media screen and (max-width: 767.98px) {
+  /* reset */
+  body {
+    font-size: 1.4rem;
+  }
   /* header */
   .content-header {
     display: block;
@@ -427,21 +427,19 @@ body {
   .main-content {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    border-radius: 0%;
+  }
+  .left-panel {
+    min-height: auto;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  .right-panel {
+    border: 0px;
   }
   .left-panel,
   .right-panel {
     width: 100%;
-    border-right: none;
-  }
-  .left-panel {
-    padding: 0;
-    min-height: auto;
-    overflow-y: hidden;
-  }
-  .part,
-  .question {
-    border-radius: 1rem;
   }
   /* finish main-content */
 
