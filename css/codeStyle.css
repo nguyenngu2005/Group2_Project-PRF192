@@ -14,3 +14,13 @@
   padding-left: 1rem;
   font-size: 2rem;
 }
+
+.io {
+  color: white;
+  background-color: rgb(65, 65, 65);
+  min-height: 3.6rem;
+  padding: 1rem;
+  border: 0px;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
