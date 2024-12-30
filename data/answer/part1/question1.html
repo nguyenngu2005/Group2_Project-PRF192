@@ -91,8 +91,8 @@ int main(){
       h và đáy là 2*h - 1.
     </p>
     <p class="m-0">
-      2. Có 2 phép tính cần lưu ý ở đây là <code>i % (2*h - 1)</code> và
-      <code>i / (2*h - 1)</code>:
+      2. Có 2 phép tính cần lưu ý ở đây là <strong>i % (2*h - 1)</strong> và
+      <strong>i / (2*h - 1)</strong>:
     </p>
     <ul>
       <li>
@@ -106,8 +106,15 @@ int main(){
       </li>
     </ul>
     <p>
-      3. Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là col (cột)
-      và row (hàng) tương ứng với i và j ở cách 1.
+      3. Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là
+      <strong>col</strong> (<strong>i % (2*h - 1)</strong>) và
+      <strong>row</strong> (<strong>i / (2*h - 1)</strong>) tương ứng với i và j
+      ở cách 1.
     </p>
+    <p>
+      4. Về phần khi dán "\n" khi <strong>col</strong> đã đến cuối dòng, nghĩ là
+      <strong>col</strong> == 2*h - 2, do mỗi dòng chỉ chạy đến bé hơn 2*h - 1.
+    </p>
+    <p>5. Các trường hợp còn lại chúng ta sẽ in ra " ".</p>
   </div>
 </div>

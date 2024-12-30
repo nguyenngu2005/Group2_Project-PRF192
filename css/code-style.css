@@ -36,3 +36,7 @@ p,
 ul {
   margin: 0;
 }
+
+strong {
+  font-weight: 500;
+}
