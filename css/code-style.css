@@ -31,3 +31,8 @@
   margin-bottom: 3px;
   border-bottom: 3px solid rgb(195, 194, 194);
 }
+
+p,
+ul {
+  margin: 0;
+}
