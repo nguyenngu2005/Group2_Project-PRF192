@@ -182,34 +182,34 @@ body {
 .logo-header img {
   height: auto;
   width: 350px;
+  margin-bottom: 1rem;
   background-repeat: no-repeat;
   display: inline-block;
   line-height: 30px;
   vertical-align: middle;
   background-size: 350px 100px;
-  margin-right: 10px;
 }
 
 .form-header {
   display: flex;
-  align-items: center;
 }
 
 .form-header input {
-  height: 10%;
+  height: 3.4rem;
   width: 27rem;
   padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 32px;
+  border: 2px solid #ffa500;
+  border-radius: 1rem 0 0 1rem;
   font-size: 1.6rem;
 }
 
 .form-header button {
-  height: 10%;
+  height: 3.4rem;
+  width: 8rem;
   background-color: orange;
   color: white;
-  border: none;
-  border-radius: 10px;
+  border: 2px solid #ffa500;
+  border-radius: 0 1rem 1rem 0;
   padding: 5px 10px;
   font-weight: bold;
   text-align: center;
@@ -222,7 +222,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #fbf7f4;
@@ -231,51 +230,66 @@ body {
 }
 
 .left-panel {
-  width: 25%;
+  width: 25rem;
   min-height: 100vh;
   max-height: 100vh;
-  padding: 1rem 1rem 1rem 3rem;
-  border-right: 1px solid #ddd;
   text-align: left;
+}
+
+.left-panel > div {
+  width: 100%;
 }
 
 .right-panel {
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  padding: 3rem 1rem 1rem 1rem;
   background-color: #fff;
   text-align: left;
+  border-left: 5px solid #f4a261;
 }
 
 .left-panel,
 .right-panel {
+  padding-bottom: 1rem;
   overflow-y: auto;
+}
+
+.right-title {
+  border-bottom: 2px solid #f4a261;
+}
+
+.left-title,
+.right-title {
+  background-color: #f4a261;
+  color: white;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
 }
 
 .part {
   font-weight: bold;
   padding: 10px 1rem;
+  border-top: 2px solid #f4a261;
 }
 
 .question {
-  padding: 10px 3rem;
-  margin: 0 2rem;
-  min-width: 10rem;
+  padding: 0.5rem 3rem;
 }
 
 .part,
 .question {
   display: none;
   cursor: pointer;
-  border: 0px;
-  border-radius: 3rem;
 }
 
 .part:hover,
 .question:hover {
-  background-color: #cab4a2;
+  background-color: #e2dfdc;
   color: white;
+  transition: all 0.15s ease-in-out;
 }
 
 .part.clicked,
@@ -289,12 +303,8 @@ body {
   display: block;
 }
 
-.separator {
-  width: 5px;
-  background-color: #f4a261;
-  height: auto;
-  margin: 0;
-  border-radius: 1px;
+.answer {
+  padding: 3rem 1rem 1rem 1rem;
 }
 
 .loading {
@@ -388,20 +398,22 @@ body {
     align-items: center;
   }
   .form-header input {
-    height: auto;
-    width: 20rem;
+    height: 3.4rem;
+    width: 23rem;
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #ffa500;
+    border-radius: 1rem 0 0 1rem;
   }
   .form-header button {
-    height: auto;
+    height: 3.4rem;
+    width: 4rem;
     background-color: orange;
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 7px;
+    padding: auto 0;
+    border: 2px solid #ffa500;
+    border-radius: 0 1rem 1rem 0;
     font-weight: bold;
+    text-align: center;
   }
   .search-header {
     display: flex;
@@ -411,17 +423,23 @@ body {
 
   /* main-content */
   .main-content {
+    display: flex;
     flex-direction: column;
     padding: 1rem;
   }
   .left-panel,
   .right-panel {
-    flex: none;
     width: 100%;
     border-right: none;
   }
   .left-panel {
+    padding: 0;
     min-height: auto;
+    overflow-y: hidden;
+  }
+  .part,
+  .question {
+    border-radius: 1rem;
   }
   /* finish main-content */
 
