@@ -252,6 +252,7 @@ body {
 }
 
 .right-title {
+  display: none;
   border-bottom: 2px solid #f4a261;
 }
 
@@ -444,7 +445,6 @@ body {
   .main-content {
     display: flex;
     flex-direction: column;
-    border-radius: 0%;
   }
   .left-panel {
     min-height: fit-content;
@@ -461,6 +461,13 @@ body {
     max-height: fit-content;
     overflow-y: hidden;
     width: 100%;
+    padding: 0;
+  }
+  .right-title {
+    display: block;
+  }
+  .answer {
+    padding: 1rem;
   }
   /* finish main-content */
 
