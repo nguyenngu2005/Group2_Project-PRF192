@@ -1,20 +1,47 @@
+<div class="answer-title">Vẽ hình chữ nhật</div>
+
+<div>
+  <p>
+    Để vẽ một hình chữ nhật, chúng ta sử dụng hai vòng lặp lồng nhau. Đoạn mã
+    dưới đây minh họa cách làm này.
+  </p>
+</div>
+
 <div class="code-container">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
-int main(){
-    int n, i, j;
-    printf("Nhap do dai canh: ");
-    scanf("%d", &n);
-    for(i = 0; i&lt;n; i++){
-        for(j = 0; j&lt;n; j++){
-            if(i == 0 || i == n-1 || j == 0 || j == n-1){
-                printf("* ");
-            }
-            else{
-                printf("  ");
-            }
-        }
-        printf("\n");
-    }
+int main() {
+  int width, height, i, j;
+  printf("Nhap chieu rong va chieu cao cua hinh chu nhat: ");
+  scanf("%d", &width);
+  scanf("%d", &height)
+  for (i = 0; i &lt; height; i++) {
+      for (j = 0; j &lt; width; j++) {
+          if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+              printf("*");
+          } else {
+              printf(" ");
+          }
+      }
+      printf("\n");
+  }
+  return 0;
 }</code></pre>
+</div>
+
+<div>
+  <p class="m-0 fw-bold">Giải thích:</p>
+  <p class="ps-4 m-0">
+    1. Dòng đầu tiên và dòng cuối cùng: In toàn bộ dấu *. <br />
+    2. Các dòng ở giữa: Chỉ in * ở cột đầu tiên và cột cuối cùng, khoảng trống ở
+    giữa.
+  </p>
+  <p>Và khi nhập input là 5 3 chúng ta sẽ có output như bên dưới:</p>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Output</pre>
+  <pre class="io"><code>*****
+*   *
+*****</code></pre>
 </div>

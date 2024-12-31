@@ -1,10 +1,10 @@
-<div class="answer-title">Vẽ tam giác cân rỗng</div>
+<div class="answer-title">Vẽ tam giác cân</div>
 
 <div>
   <h1>Cách 1</h1>
   <p>
-    Để vẽ một tam giác cân rỗng, cách đầu tiên cũng là cách đơn giản nhất là
-    chúng ta sẽ chạy 2 vòng lặp for lồng vào nhau như đoạn code bên dưới.
+    Để vẽ một tam giác cân, cách đầu tiên cũng là cách đơn giản nhất là chúng ta
+    sẽ chạy 2 vòng lặp for lồng vào nhau như đoạn code bên dưới.
   </p>
 </div>
 
@@ -26,11 +26,16 @@ int main() {
       printf("\n");
   }
   return 0;
-}</code></pre>
+}
+
+/*Nếu bạn muốn hình tam giác có ruột (đầy sao),
+  hãy thay điều kiện trong if bằng:
+  (j &gt;= h - 1 - i && j &lt;= h - 1 + i) 
+*/</code></pre>
 </div>
 
 <div>
-  <p class="m-0 fw-bold">Giải thích đơn giản:</p>
+  <p class="m-0 fw-bold">Giải thích:</p>
   <p class="ps-4 m-0">
     1. Dòng đầu tiên: Chỉ in một dấu * ở vị trí giữa dòng (ở cột h).<br />
     2. Dòng thứ hai trở đi: Các dấu * xuất hiện ngày càng xa vị trí giữa, tạo
@@ -54,9 +59,10 @@ int main() {
 
 <div>
   <p>
-    Với cách 2 này chúng ta sẽ nâng cao hơn một chút, thay vì phải tạo thêm 1
-    biến phụ là j thì chúng ta chỉ chạy duy nhất 1 biến i thôi. <br />
-    Tuy nhiên đoạn code này sẽ phức tạp và ít trực quan hơn cách 1.
+    Với cách 2 này chúng ta sẽ nâng cao hơn một chút, chúng ta sẽ chỉ chạy 1
+    vòng lặp và dùng 1 biến i duy nhất<br />
+    Tuy nhiên đoạn code này sẽ ít trực quan hơn cách 1 và độ phức tạp vẫn sẽ à
+    <i>O(h<sup>2</sup>)</i>
   </p>
 </div>
 
@@ -79,7 +85,13 @@ int main(){
       }
   }
   return 0;
-}</code></pre>
+}
+
+/*Nếu bạn muốn hình tam giác có ruột (đầy sao),
+  hãy thay điều kiện trong if bằng:
+  (i % (2*h - 1) &gt;= h - 1 - (i / (2*h - 1)) 
+    && i % (2*h - 1) &lt;= h - 1 + (i / (2*h - 1)))
+*/</code></pre>
 </div>
 
 <div>

@@ -447,15 +447,17 @@ body {
     border-radius: 0%;
   }
   .left-panel {
+    min-height: fit-content;
     padding: 0;
+    border-bottom: 3px solid #f4a261;
   }
   .right-panel {
+    min-height: 80vh;
     border: 0px;
     padding: 1rem;
   }
   .left-panel,
   .right-panel {
-    min-height: auto;
     max-height: fit-content;
     overflow-y: hidden;
     width: 100%;

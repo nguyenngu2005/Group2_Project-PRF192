@@ -1,0 +1,60 @@
+<div class="answer-title">Vẽ hình thoi</div>
+<div>
+  <p>
+    Để vẽ một hình thoi có hai đường chéo bằng nhau, chúng ta sử dụng hai vòng
+    lặp lồng nhau. Đoạn mã dưới đây minh họa cách làm này khi người dùng nhập
+    vào độ dài của một đường chéo.
+  </p>
+</div>
+<div class="code-container">
+  <pre class="code-title">Source</pre>
+  <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+int main() {
+    int d, i, j;
+    printf("Nhap do dai duong cheo hinh thoi:");
+    scanf("%d", &d);
+
+    if(d % 2 == 0){
+        printf("Do dai duong cheo la so chan.");
+        return 0;
+    }
+
+    int mid = d / 2;
+
+    for(int i = 0; i &lt; d; i++){
+        for(int j = 0; j &lt; d; j++){
+            if(j == abs(mid - i) || j == mid + i ||j == mid + abs(d - 1 - i)){
+                printf("*");
+            }else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+</div>
+<div>
+  <p class="m-0 fw-bold">Giải thích các phép so sánh trong điều kiện:</p>
+  <p class="ps-4 m-0">
+    1. <strong>j == abs(mid - i)</strong>: Điều kiện này kiểm tra xem vị trí cột
+    <strong>j</strong> có trùng với 2 cạnh của nửa trái hình thoi hay không.
+    <br />
+    2. <strong>j == mid + i</strong>: Điều kiện này kiểm tra xem vị trí cột
+    <strong>j</strong> có trùng với cạnh trên của nửa phải hình thoi hay
+    không.<br />
+    3. <strong>j == mid + abs(d - 1 - i)</strong>: Điều kiện này kiểm tra xem vị
+    trí cột <strong>j</strong> có trùng với cạnh dưới của nửa phải hình thoi hay
+    không.<br />
+  </p>
+  <p>Và khi nhập input là 5, chúng ta sẽ có output như bên dưới:</p>
+</div>
+<div class="code-container">
+  <pre class="code-title">Output</pre>
+  <pre class="io"><code>  *  
+ * * 
+*   *
+ * * 
+  *</code></pre>
+</div>
