@@ -374,7 +374,7 @@ body {
 }
 /* finish footer v2 */
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
   /* reset */
   body {
     font-size: 1.4rem;
