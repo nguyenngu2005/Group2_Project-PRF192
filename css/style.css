@@ -233,12 +233,13 @@ body {
   min-height: 100vh;
   max-height: 100vh;
   text-align: left;
+  overflow-y: auto;
 }
 
 .right-panel {
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
+  max-height: fit-content;
   padding: 1rem 10rem 1rem 3rem;
   background-color: #fff;
   border-left: 5px solid #f4a261;
@@ -248,7 +249,6 @@ body {
 .left-panel,
 .right-panel {
   padding-bottom: 1rem;
-  overflow-y: auto;
 }
 
 .right-title {
@@ -447,15 +447,17 @@ body {
     border-radius: 0%;
   }
   .left-panel {
-    min-height: auto;
-    overflow-y: hidden;
     padding: 0;
   }
   .right-panel {
     border: 0px;
+    padding: 1rem;
   }
   .left-panel,
   .right-panel {
+    min-height: auto;
+    max-height: fit-content;
+    overflow-y: hidden;
     width: 100%;
   }
   /* finish main-content */
