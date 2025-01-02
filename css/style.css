@@ -68,6 +68,9 @@ body {
     transform: translateX(80px);
   }
 }
+.flowers.hidden {
+  display: none;
+}
 .flower {
   height: auto;
   width: 30px; /*chinh kich thuoc hoa*/
@@ -190,23 +193,31 @@ body {
   background-size: 350px 100px;
 }
 
+.control-header {
+  display: flex;
+  justify-content: space-around;
+  width: 35rem;
+  margin: 0 auto;
+}
+
 .form-header {
   display: flex;
 }
 
 .form-header input {
   height: 3.4rem;
-  width: 27rem;
+  width: 24rem;
   padding: 5px;
   border: 2px solid #ffa500;
   border-radius: 1rem 0 0 1rem;
   font-size: 1.6rem;
 }
 
-.form-header button {
+.form-header button,
+.btn-ctrl-flower button {
   height: 3.4rem;
-  width: 8rem;
-  background-color: orange;
+  width: 4rem;
+  background-color: #ffa500;
   color: white;
   border: 2px solid #ffa500;
   border-radius: 0 1rem 1rem 0;
@@ -214,6 +225,15 @@ body {
   text-align: center;
 }
 
+.btn-ctrl-flower button {
+  border-radius: 1rem;
+}
+
+.btn-ctrl-flower.active button {
+  background-color: white;
+  color: #ffa500;
+  border: 2px solid #ffa500;
+}
 /* finish header */
 
 /* main-content */
@@ -411,27 +431,16 @@ body {
     vertical-align: middle;
     background-size: 270px 90px;
   }
+  .control-header {
+    width: 27rem;
+  }
   .form-header {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
   }
   .form-header input {
-    height: 3.4rem;
-    width: 23rem;
-    padding: 5px;
-    border: 2px solid #ffa500;
-    border-radius: 1rem 0 0 1rem;
-  }
-  .form-header button {
-    height: 3.4rem;
-    width: 4rem;
-    background-color: orange;
-    color: white;
-    border: 2px solid #ffa500;
-    border-radius: 0 1rem 1rem 0;
-    font-weight: bold;
-    text-align: center;
+    width: 18rem;
   }
   .search-header {
     display: flex;

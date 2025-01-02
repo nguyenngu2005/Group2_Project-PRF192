@@ -1,3 +1,43 @@
+const searchFunction = (inputValue) => {
+  if (inputValue.trim()) {
+    let parts = document.querySelectorAll(".part");
+    let questions = document.querySelectorAll(".question");
+
+    let filteredParts = [...parts].filter((part) =>
+      part.innerText.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    let filteredQuestions = [...questions].filter((question) =>
+      question.innerText.toLowerCase().includes(inputValue.toLowerCase())
+    );
+
+    //cho tất cả parts và questions ẩn
+    document.querySelectorAll(".part").forEach((part) => {
+      part.classList.remove("active");
+      part.classList.remove("clicked");
+    });
+    document.querySelectorAll(".question").forEach((question) => {
+      question.classList.remove("active");
+      question.classList.remove("clicked");
+    });
+
+    //hiển thị theo filteredParts
+    filteredParts.forEach((part) => {
+      part.classList.add("active");
+    });
+    //hiển thị theo filteredQuestions
+    filteredQuestions.forEach((question) => {
+      question.classList.add("active");
+    });
+  } else {
+    init();
+  }
+};
+
+const flowersCtrlFunction = () => {
+  document.querySelector(".btn-ctrl-flower").classList.toggle("active");
+  document.querySelector(".flowers").classList.toggle("hidden");
+};
+
 //chức năng hiện part khi vừa load xong trang
 const init = () => {
   const parts = document.querySelectorAll(".part");
@@ -13,6 +53,10 @@ const init = () => {
     part.classList.add("active");
     console.log("done");
   });
+  const status = JSON.parse(localStorage.getItem("status")) || [];
+  if (status && status.flowersHidden) {
+    flowersCtrlFunction();
+  }
 };
 document.addEventListener("DOMContentLoaded", init());
 
@@ -86,42 +130,6 @@ document.querySelector(".form-header").addEventListener("submit", (event) => {
  * Khi tìm thấy tên part sẽ hiện list part đó gồm các câu bên trong
  * Nếu chỉ tìm thấy tên question thì sẽ hiện part chứa question đó và chỉ question đó, ẩn các question khác trong part
  */
-
-const searchFunction = (inputValue) => {
-  if (inputValue.trim()) {
-    let parts = document.querySelectorAll(".part");
-    let questions = document.querySelectorAll(".question");
-
-    let filteredParts = [...parts].filter((part) =>
-      part.innerText.toLowerCase().includes(inputValue.toLowerCase())
-    );
-    let filteredQuestions = [...questions].filter((question) =>
-      question.innerText.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    //cho tất cả parts và questions ẩn
-    document.querySelectorAll(".part").forEach((part) => {
-      part.classList.remove("active");
-      part.classList.remove("clicked");
-    });
-    document.querySelectorAll(".question").forEach((question) => {
-      question.classList.remove("active");
-      question.classList.remove("clicked");
-    });
-
-    //hiển thị theo filteredParts
-    filteredParts.forEach((part) => {
-      part.classList.add("active");
-    });
-    //hiển thị theo filteredQuestions
-    filteredQuestions.forEach((question) => {
-      question.classList.add("active");
-    });
-  } else {
-    init();
-  }
-};
-
 document.querySelector("#filter").addEventListener("keyup", (event) => {
   let inputValue = event.target.value;
   searchFunction(inputValue);
@@ -130,4 +138,17 @@ document.querySelector("#filter").addEventListener("keyup", (event) => {
 document.querySelector("#btnSearch").addEventListener("click", (event) => {
   let inputValue = document.querySelector("#filter").value;
   searchFunction(inputValue);
+});
+
+//bật tắt flowers rơi
+document.querySelector("#btnFlower").addEventListener("click", (event) => {
+  flowersCtrlFunction();
+  localStorage.setItem(
+    "status",
+    JSON.stringify({
+      flowersHidden: document
+        .querySelector(".flowers")
+        .classList.contains("hidden"),
+    })
+  );
 });
