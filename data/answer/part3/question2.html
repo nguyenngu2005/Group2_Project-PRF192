@@ -1,34 +1,58 @@
+<div class="answer-title">Kiểm tra số hoàn hảo</div>
+
+<div>
+  <p class="m-0 fw-bold">Số hoàn hảo là gì?</p>
+  <p class="ps-4 m-0">
+    <strong>Số hoàn hảo</strong> là một số nguyên dương mà tổng các ước nguyên
+    dương thực sự của nó (các số nguyên dương bị nó chia hết ngoại trừ nó) bằng
+    chính nó.
+  </p>
+</div>
+
 <div class="code-container">
-    <pre class="code-title">Source</pre>
-    <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
+  <pre class="code-title">Source</pre>
+  <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 
 int main() {
-    int n, sum = 0;
-    printf("Nhap mot so nguyen: ");
-    scanf("%d", &n);
-            
-    for (int i = 1; i <= n / 2; i++) {
-        if (n % i == 0) {
-            sum += i;
-        }
-    }
-            
-    if (sum == n && n != 0) {
-        printf("%d la so hoan hao.\n", n);
-    }else {
-        printf("%d khong phai la so hoan hao.\n", n);
-    }   
-    return 0;
+  int n, sum = 0;
+
+  printf("Nhập một số nguyên: ");
+  scanf("%d", &n);
+
+  if (n &lt;= 0) {
+      printf("%d không phải là số hoàn hảo.\n", n);
+  } else {
+      for (int i = 1; i &lt;= n / 2; i++) {
+          if (n % i == 0) {
+              sum += i;
+          }
+      }
+  
+      if (sum == n) {
+          printf("%d là số hoàn hảo.\n", n);
+      } else {
+          printf("%d không phải là số hoàn hảo.\n", n);
+      }
+  }
+
+  return 0;
 }</code></pre>
-  </div>
-  
-  <div class="code-container">
-    <pre class="code-title">Input</pre>
-    <pre class="io"><code></code></pre>
-  </div>
-  
-  <div class="code-container">
-    <pre class="code-title">Output</pre>
-    <pre class="io"><code></code></pre>
-  </div>
-  
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Input</pre>
+  <pre class="io"><code>Nhập một số nguyên: 6</code></pre>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Output</pre>
+  <pre class="io"><code>6 là số hoàn hảo.</code></pre>
+</div>
+
+<div>
+  <p class="m-0 fw-bold">Tại sao chỉ cần kiểm tra đến n / 2?</p>
+  <p class="ps-4 m-0">
+    Một nửa của n (tức n / 2) là ước số lớn nhất có thể của n ngoại trừ chính
+    nó.
+  </p>
+</div>

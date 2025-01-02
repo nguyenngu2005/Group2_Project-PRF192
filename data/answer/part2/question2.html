@@ -1,3 +1,5 @@
+<div class="answer-title">Tính chu vi và diện tích hình vuông</div>
+
 <div class="code-container">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
@@ -8,11 +10,16 @@ int main() {
   printf("Nhập chiều dài cạnh của hình vuông: ");
   scanf("%f", &canh);
 
-  chuVi = 4 * canh;
-  dienTich = canh * canh;
+  //kiểm tra cạnh có phải số dương không
+  if (canh > 0) {
+    chuVi = 4 * canh;
+    dienTich = canh * canh;
 
-  printf("Chu vi hình vuông: %.2f\n", chuVi);
-  printf("Diện tích hình vuông: %.2f\n", dienTich);
+    printf("Chu vi hình vuông: %.2f\n", chuVi);
+    printf("Diện tích hình vuông: %.2f\n", dienTich);
+  } else {
+    printf("Chiều dài cạnh phải là số dương.\n");
+  }
 
   return 0;
 }</code></pre>
@@ -20,10 +27,11 @@ int main() {
 
 <div class="code-container">
   <pre class="code-title">Input</pre>
-  <pre class="io"><code></code></pre>
+  <pre class="io"><code>Nhập chiều dài cạnh của hình vuông: 3.5</code></pre>
 </div>
 
 <div class="code-container">
   <pre class="code-title">Output</pre>
-  <pre class="io"><code></code></pre>
+  <pre class="io"><code>Chu vi hình vuông: 14.00
+Diện tích hình vuông: 12.25</code></pre>
 </div>

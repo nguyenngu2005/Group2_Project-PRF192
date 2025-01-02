@@ -5,28 +5,28 @@
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 int main() {
-    int d, i, j;
-    printf("Nhap do dai duong cheo hinh thoi:");
-    scanf("%d", &d);
+  int d, i, j;
+  printf("Nhap do dai duong cheo hinh thoi:");
+  scanf("%d", &d);
 
-    if(d % 2 == 0){
-        printf("Do dai duong cheo la so chan.");
-        return 0;
-    }
+  if(d % 2 == 0){
+      printf("Do dai duong cheo la so chan.");
+      return 0;
+  }
 
-    int mid = d / 2;
+  int mid = d / 2;
 
-    for(int i = 0; i &lt; d; i++){
-        for(int j = 0; j &lt; d; j++){
-            if(j == abs(mid - i) || j == mid + i ||j == mid + abs(d - 1 - i)){
-                printf("*");
-            }else{
-                printf(" ");
-            }
-        }
-        printf("\n");
-    }
-    return 0;
+  for(int i = 0; i &lt; d; i++){
+      for(int j = 0; j &lt; d; j++){
+          if(j == abs(mid - i) || j == mid + i ||j == mid + abs(d - 1 - i)){
+              printf("*");
+          }else{
+              printf(" ");
+          }
+      }
+      printf("\n");
+  }
+  return 0;
 }</code></pre>
 </div>
 <div>

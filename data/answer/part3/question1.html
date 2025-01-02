@@ -1,40 +1,61 @@
+<div class="answer-title">Kiểm tra số nguyên tố</div>
+
+<div>
+  <p class="m-0 fw-bold">Số nguyên tố là gì?</p>
+  <p class="ps-4 m-0">
+    <strong>Số nguyên tố</strong> là số tự nhiên lớn hơn 1 chỉ có 2 ước số là 1
+    và chính nó.
+  </p>
+</div>
+
 <div class="code-container">
-    <pre class="code-title">Source</pre>
-    <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
+  <pre class="code-title">Source</pre>
+  <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
-        
+       
 int main() {
-    int n, isPrime = 1;
-    printf("Nhập một số nguyên: ");
-    scanf("%d", &n);
-        
-    if (n < 2) {
-        isPrime = 0;
-    } else {
-        for (int i = 2; i <= sqrt(n); i++) {
-            if (n % i == 0) {
-                isPrime = 0;
-                break;
-            }
-        }
-    }
-    
-    if (isPrime) {
-        printf("%d la so nguyen to.\n", n);
-    }else {
-        printf("%d khong phai la so nguyen to.\n", n);
-    }
-    return 0;
+  int n, isPrime = 1;
+
+  printf("Nhập một số nguyên: ");
+  scanf("%d", &n);
+
+  if (n &lt; 2 || (n % 2 == 0 && n > 2)) {
+      isPrime = 0; // Số nhỏ hơn 2 hoặc số chẵn lớn hơn 2 không phải số nguyên tố
+  } else {
+      for (int i = 3; i &lt;= sqrt(n); i += 2) { // Chỉ kiểm tra số lẻ
+          if (n % i == 0) {
+              isPrime = 0;
+              break;
+          }
+      }
+  }
+
+  if (isPrime) {
+      printf("%d là số nguyên tố.\n", n);
+  } else {
+      printf("%d không phải là số nguyên tố.\n", n);
+  }
+
+  return 0;
 }</code></pre>
-  </div>
-  
-  <div class="code-container">
-    <pre class="code-title">Input</pre>
-    <pre class="io"><code></code></pre>
-  </div>
-  
-  <div class="code-container">
-    <pre class="code-title">Output</pre>
-    <pre class="io"><code></code></pre>
-  </div>
-  
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Input</pre>
+  <pre class="io"><code>Nhập một số nguyên: 5</code></pre>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Output</pre>
+  <pre class="io"><code>5 là số nguyên tố.</code></pre>
+</div>
+
+<div>
+  <p class="m-0 fw-bold">Về số 2</p>
+  <p class="ps-4 m-0">
+    Số 2 là số chẵn duy nhất là số nguyên tố, khi 2 qua được điều kiện if và tới
+    else, nó sẽ không thể vào vòng lặp do điều kiện bắt đầu của vòng lặp là i =
+    3 và kết thúc là i &lt;= sqrt(n) <br />
+    Do đó mà isPrime vẫn giữ giá trị 1.
+  </p>
+</div>

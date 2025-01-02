@@ -1,20 +1,30 @@
+<div class="answer-title">
+  Tính chu vi và diện tích tam giác từ 3 cạnh nhập vào
+</div>
+
 <div class="code-container">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 
 int main() {
-  int a, b, c, s, chuVi, dienTich;
+  float a, b, c, p, chuVi, dienTich;
 
   printf("Nhập độ dài ba cạnh tam giác: ");
   scanf("%f %f %f", &a, &b, &c);
 
-  chuVi = a + b + c;
-  s = (a + b + c) / 2;
-  dienTich = sqrt(s * (s - a) * (s - b) * (s - c));
+  // Kiểm tra điều kiện tam giác
+  if (a + b > c && a + c > b && b + c > a) {
+    chuVi = a + b + c;
+    p = chuVi / 2; // p là nửa chu vi
+    // Tính diện tích theo công thức Heron
+    dienTich = sqrt(p * (p - a) * (p - b) * (p - c));
 
-  printf("Chu vi tam giác: %2f\n, chuVi);
-  printf("Diện tích tam giác: %2f\n, dienTich);
+    printf("Chu vi tam giác: %.2f\n", chuVi);
+    printf("Diện tích tam giác: %.2f\n", dienTich);
+  } else {
+    printf("Ba cạnh không tạo thành tam giác hợp lệ.\n");
+  }
 
   return 0;
 }</code></pre>
@@ -22,10 +32,11 @@ int main() {
 
 <div class="code-container">
   <pre class="code-title">Input</pre>
-  <pre class="io"><code></code></pre>
+  <pre class="io"><code>Nhập độ dài ba cạnh tam giác: 3 4 5</code></pre>
 </div>
 
 <div class="code-container">
   <pre class="code-title">Output</pre>
-  <pre class="io"><code></code></pre>
+  <pre class="io"><code>Chu vi tam giác: 12.00
+Diện tích tam giác: 6.00</code></pre>
 </div>
