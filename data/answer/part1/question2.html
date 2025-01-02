@@ -7,13 +7,13 @@ int main() {
   int width, height, i, j;
   printf("Nhap chieu rong va chieu cao cua hinh chu nhat: ");
   scanf("%d", &width);
-  scanf("%d", &height)
+  scanf("%d", &height);
   for (i = 0; i &lt; height; i++) {
       for (j = 0; j &lt; width; j++) {
           if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
-              printf("*");
+              printf("* ");
           } else {
-              printf(" ");
+              printf("  ");
           }
       }
       printf("\n");
@@ -34,7 +34,7 @@ int main() {
 
 <div class="code-container">
   <pre class="code-title">Output</pre>
-  <pre class="io"><code>*****
-*   *
-*****</code></pre>
+  <pre class="io"><code>* * * * *
+*       *
+* * * * *</code></pre>
 </div>
