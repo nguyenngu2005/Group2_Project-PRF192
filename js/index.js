@@ -29,7 +29,7 @@ const searchFunction = (inputValue) => {
       question.classList.add("active");
     });
   } else {
-    init();
+    initParts();
   }
 };
 
@@ -39,7 +39,7 @@ const flowersCtrlFunction = () => {
 };
 
 //chức năng hiện part khi vừa load xong trang
-const init = () => {
+const initParts = () => {
   const parts = document.querySelectorAll(".part");
   document.querySelectorAll(".part").forEach((part) => {
     part.classList.remove("active");
@@ -51,14 +51,19 @@ const init = () => {
   });
   parts.forEach((part) => {
     part.classList.add("active");
-    console.log("done");
   });
+};
+const initStatusFlowers = () => {
   const status = JSON.parse(localStorage.getItem("status")) || [];
   if (status && status.flowersHidden) {
     flowersCtrlFunction();
   }
 };
-document.addEventListener("DOMContentLoaded", init());
+
+document.addEventListener("DOMContentLoaded", () => {
+  initParts();
+  initStatusFlowers();
+});
 
 //chức năng thêm xoá toàn bộ .clicked và thêm .clicked cho part hoặc question được click
 document.querySelector(".left-panel").addEventListener("click", (event) => {
