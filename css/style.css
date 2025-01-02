@@ -210,7 +210,6 @@ body {
   color: white;
   border: 2px solid #ffa500;
   border-radius: 0 1rem 1rem 0;
-  padding: 5px 10px;
   font-weight: bold;
   text-align: center;
 }
@@ -429,7 +428,6 @@ body {
     width: 4rem;
     background-color: orange;
     color: white;
-    padding: auto 0;
     border: 2px solid #ffa500;
     border-radius: 0 1rem 1rem 0;
     font-weight: bold;
