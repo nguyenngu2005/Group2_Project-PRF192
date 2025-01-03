@@ -8,6 +8,7 @@
 .code-container pre {
   border-radius: 1rem;
   margin: 0;
+  padding: 0.5rem 1rem;
 }
 
 .code-title {
