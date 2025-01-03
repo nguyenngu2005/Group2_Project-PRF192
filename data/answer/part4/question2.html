@@ -1,0 +1,75 @@
+<div class="answer-title">
+  Tìm tích gồm 2 thừa số của 1 số sao cho độ chênh lệch của 2 thừa số là nhỏ
+  nhất
+</div>
+
+<div>
+  <p class="m-0 fw-bold">Ý tưởng</p>
+  <div class="m-0">
+    <ul>
+      <li>
+        Độ chênh lệch giữa hai thừa số nhỏ nhất khi hai thừa số gần nhau nhất.
+      </li>
+      <li>
+        Điều kiện để hai số là thừa số của một số n là n % i == 0 (tức là i chia
+        hết n, và thừa số còn lại là n / i).
+      </li>
+      <li>
+        Để đảm bảo độ chênh lệch nhỏ nhất, duyệt từ sqrt(n) ngược về 1, vì các
+        thừa số gần nhau nhất sẽ nằm gần căn bậc hai của n.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Source</pre>
+  <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+         
+int main() {
+  int number;
+  printf("Nhập số nguyên cần xử lý: ");
+  scanf("%d", &number);
+
+  int numberAbs = abs(number); // Lấy giá trị tuyệt đối để tránh input là số âm
+  int factor1 = 1, factor2 = numberAbs; // Khởi tạo thừa số
+  int minDifference = numberAbs - 1; // Khởi tạo độ chênh lệch lớn nhất
+  
+  if(number != 0){
+    for(int i = sqrt(numberAbs); i &gt;= 1; i--){
+      if(numberAbs % i == 0){ // Nếu i là thừa số
+        int j = numberAbs / i;
+        if(abs(i - j) &lt; minDifference){ // Nếu chênh lệch nhỏ hơn
+          factor1 = i;
+          factor2 = j;
+          minDifference = abs(i - j);
+        }
+      }
+    }
+  
+    // Nếu số ban đầu là âm, gán dấu âm cho một thừa số
+    if(number &lt; 0){
+      factor1 *= (-1);
+    }
+  }else{
+      // Nếu số là 0, cặp thừa số là 0 và 0
+      factor1 = 0;
+      // factor2 đã gán bằng số ban đầu nên không cần gán 0 cho factor2 nữa
+  }
+
+  printf("Hai thừa số cần tìm là %d và %d", factor1, factor2);
+
+  return 0;
+}</code></pre>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Input</pre>
+  <pre class="io"><code>Nhập số nguyên cần xử lý: -28</code></pre>
+</div>
+
+<div class="code-container">
+  <pre class="code-title">Output</pre>
+  <pre class="io"><code>Hai thừa số cần tìm là: -4 và 7</code></pre>
+</div>

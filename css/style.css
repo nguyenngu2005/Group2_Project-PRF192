@@ -248,6 +248,7 @@ body {
 }
 
 .left-panel {
+  min-width: 12rem;
   width: 25rem;
   min-height: 100vh;
   max-height: 100vh;
@@ -293,6 +294,7 @@ body {
 
 .question {
   padding: 0.5rem 3rem;
+  border-top: 1.5px solid #e2dfdc;
 }
 
 .part,

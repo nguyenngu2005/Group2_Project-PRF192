@@ -4,6 +4,7 @@
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
+
 int main() {
   int d, i, j;
   printf("Nhap do dai duong cheo hinh thoi:");
@@ -29,21 +30,31 @@ int main() {
   return 0;
 }</code></pre>
 </div>
+
 <div>
-  <p class="m-0 fw-bold">Giải thích các phép so sánh trong điều kiện:</p>
-  <p class="ps-4 m-0">
-    1. <strong>j == abs(mid - i)</strong>: Điều kiện này kiểm tra xem vị trí cột
-    <strong>j</strong> có trùng với 2 cạnh của nửa trái hình thoi hay không.
-    <br />
-    2. <strong>j == mid + i</strong>: Điều kiện này kiểm tra xem vị trí cột
-    <strong>j</strong> có trùng với cạnh trên của nửa phải hình thoi hay
-    không.<br />
-    3. <strong>j == mid + abs(d - 1 - i)</strong>: Điều kiện này kiểm tra xem vị
-    trí cột <strong>j</strong> có trùng với cạnh dưới của nửa phải hình thoi hay
-    không.<br />
-  </p>
+  <p class="m-0 fw-bold">Giải thích các phép so sánh trong điều kiện</p>
+  <div class="m-0">
+    <ul>
+      <li>
+        <strong>j == abs(mid - i)</strong>: Điều kiện này kiểm tra xem vị trí
+        cột <strong>j</strong> có trùng với 2 cạnh của nửa trái hình thoi hay
+        không.
+      </li>
+      <li>
+        <strong>j == mid + i</strong>: Điều kiện này kiểm tra xem vị trí cột
+        <strong>j</strong> có trùng với cạnh trên của nửa phải hình thoi hay
+        không.
+      </li>
+      <li>
+        <strong>j == mid + abs(d - 1 - i)</strong>: Điều kiện này kiểm tra xem
+        vị trí cột <strong>j</strong> có trùng với cạnh dưới của nửa phải hình
+        thoi hay không.
+      </li>
+    </ul>
+  </div>
   <p>Và khi nhập input là 5, chúng ta sẽ có output như bên dưới:</p>
 </div>
+
 <div class="code-container">
   <pre class="code-title">Output</pre>
   <pre class="io"><code>  *  

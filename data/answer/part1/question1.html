@@ -35,14 +35,20 @@ int main() {
 </div>
 
 <div>
-  <p class="m-0 fw-bold">Giải thích:</p>
-  <p class="ps-4 m-0">
-    1. Dòng đầu tiên: Chỉ in một dấu * ở vị trí giữa dòng (ở cột h).<br />
-    2. Dòng thứ hai trở đi: Các dấu * xuất hiện ngày càng xa vị trí giữa, tạo
-    thành cạnh của tam giác.<br />
-    3. Dòng cuối cùng: In một hàng đầy đủ 2 * h - 1 dấu * tạo thành đáy tam
-    giác.
-  </p>
+  <p class="m-0 fw-bold">Giải thích</p>
+  <div class="m-0">
+    <ul>
+      <li>Dòng đầu tiên: Chỉ in một dấu * ở vị trí giữa dòng (ở cột h).</li>
+      <li>
+        Dòng thứ hai trở đi: Các dấu * xuất hiện ngày càng xa vị trí giữa, tạo
+        thành cạnh của tam giác.
+      </li>
+      <li>
+        Dòng cuối cùng: In một hàng đầy đủ 2 * h - 1 dấu * tạo thành đáy tam
+        giác.
+      </li>
+    </ul>
+  </div>
   <p>Và khi nhập input là 5 chúng ta sẽ có output như bên dưới:</p>
 </div>
 
@@ -95,38 +101,42 @@ int main(){
 </div>
 
 <div>
-  <p class="m-0 fw-bold">Giải thích:</p>
-  <div class="ps-4 m-0">
-    <p>
-      1. Về phần điều kiện dừng của i, do chỉ chạy 1 biến duy nhất nên chúng ta
-      sẽ cho i chạy từ 0 đến bé hơn h * (2*h - 1), do chiều cao của tam giác là
-      h và đáy là 2*h - 1.
-    </p>
-    <p class="m-0">
-      2. Có 2 phép tính cần lưu ý ở đây là <strong>i % (2*h - 1)</strong> và
-      <strong>i / (2*h - 1)</strong>:
-    </p>
+  <p class="m-0 fw-bold">Giải thích</p>
+  <div class="m-0">
     <ul>
       <li>
-        <strong>i % (2*h - 1):</strong> Đây là cách lấy số cột hiện tại. Ví dụ
-        khi h = 5 và i = 3 thì khi đưa vào công thức chúng ta sẽ có kết quả là
-        3. Ví dụ khác cũng với h = 5 nhưng i = 14, chúng ta sẽ có kết quả là 3.
+        Về phần điều kiện dừng của i, do chỉ chạy 1 biến duy nhất nên chúng ta
+        sẽ cho i chạy từ 0 đến bé hơn h * (2*h - 1), do chiều cao của tam giác
+        là h và đáy là 2*h - 1.
+      </li>
+      <li class="m-0">
+        Có 2 phép tính cần lưu ý ở đây là <strong>i % (2*h - 1)</strong> và
+        <strong>i / (2*h - 1)</strong>:
+      </li>
+      <ul>
+        <li>
+          <strong>i % (2*h - 1):</strong> Đây là cách lấy số cột hiện tại. Ví dụ
+          khi h = 5 và i = 3 thì khi đưa vào công thức chúng ta sẽ có kết quả là
+          3. Ví dụ khác cũng với h = 5 nhưng i = 14, chúng ta sẽ có kết quả là
+          3.
+        </li>
+        <li>
+          <strong>i / (2*h - 1):</strong> Đây là cách lấy số dòng hiện tại. Bạn
+          có thể lấy ví dụ h và i như trên để hiểu rõ.
+        </li>
+      </ul>
+      <li>
+        Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là
+        <strong>col</strong> (<strong>i % (2*h - 1)</strong>) và
+        <strong>row</strong> (<strong>i / (2*h - 1)</strong>) tương ứng với i và
+        j ở cách 1.
       </li>
       <li>
-        <strong>i / (2*h - 1):</strong> Đây là cách lấy số dòng hiện tại. Bạn có
-        thể lấy ví dụ h và i như trên để hiểu rõ.
+        Về phần khi dán "\n" khi <strong>col</strong> đã đến cuối dòng, nghĩ là
+        <strong>col</strong> == 2*h - 2, do mỗi dòng chỉ chạy đến bé hơn 2*h -
+        1.
       </li>
+      <li>Các trường hợp còn lại chúng ta sẽ in ra " ".</li>
     </ul>
-    <p>
-      3. Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là
-      <strong>col</strong> (<strong>i % (2*h - 1)</strong>) và
-      <strong>row</strong> (<strong>i / (2*h - 1)</strong>) tương ứng với i và j
-      ở cách 1.
-    </p>
-    <p>
-      4. Về phần khi dán "\n" khi <strong>col</strong> đã đến cuối dòng, nghĩ là
-      <strong>col</strong> == 2*h - 2, do mỗi dòng chỉ chạy đến bé hơn 2*h - 1.
-    </p>
-    <p>5. Các trường hợp còn lại chúng ta sẽ in ra " ".</p>
   </div>
 </div>
