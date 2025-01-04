@@ -12,12 +12,14 @@ html {
 
 body {
   font-size: 1.6rem;
+  line-height: 1.3333;
 }
 
 /* container */
 .container {
   height: 100vh;
   width: 100%;
+  min-width: 120rem;
   max-width: 100%;
   padding: 0;
 }
@@ -400,7 +402,10 @@ body {
 @media screen and (max-width: 768px) {
   /* reset */
   body {
-    font-size: 1.4rem;
+    font-size: calc(1.6rem * 0.9375);
+  }
+  .container {
+    min-width: 32rem;
   }
   /* header */
   .content-header {
@@ -455,6 +460,7 @@ body {
   .main-content {
     display: flex;
     flex-direction: column;
+    min-width: 100%;
   }
   .left-panel {
     min-height: fit-content;
