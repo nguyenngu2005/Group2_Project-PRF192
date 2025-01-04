@@ -1,11 +1,11 @@
-.code-container {
+.code-box {
   border: 0px;
   border-radius: 1rem;
   margin-bottom: 3px;
   background-color: #272822;
 }
 
-.code-container pre {
+.code-box pre {
   border-radius: 1rem;
   margin: 0;
   padding: 0.5rem 1rem;
@@ -29,13 +29,20 @@
 .answer-title {
   font-weight: bold;
   font-size: 3rem;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
   border-bottom: 3px solid rgb(195, 194, 194);
+  text-align: justify;
 }
 
-p,
-ul {
+.explain-box {
+  margin-bottom: 3px;
+}
+
+.explain-box p,
+.explain-box ul,
+.explain-box li {
   margin: 0;
+  text-align: justify;
 }
 
 strong {

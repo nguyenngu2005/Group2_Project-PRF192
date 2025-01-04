@@ -1,6 +1,6 @@
 <div class="answer-title">Vẽ hình thoi có 2 đường chéo bằng nhau</div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
@@ -31,31 +31,31 @@ int main() {
 }</code></pre>
 </div>
 
-<div>
-  <p class="m-0 fw-bold">Giải thích các phép so sánh trong điều kiện</p>
-  <div class="m-0">
-    <ul>
-      <li>
-        <strong>j == abs(mid - i)</strong>: Điều kiện này kiểm tra xem vị trí
-        cột <strong>j</strong> có trùng với 2 cạnh của nửa trái hình thoi hay
-        không.
-      </li>
-      <li>
-        <strong>j == mid + i</strong>: Điều kiện này kiểm tra xem vị trí cột
-        <strong>j</strong> có trùng với cạnh trên của nửa phải hình thoi hay
-        không.
-      </li>
-      <li>
-        <strong>j == mid + abs(d - 1 - i)</strong>: Điều kiện này kiểm tra xem
-        vị trí cột <strong>j</strong> có trùng với cạnh dưới của nửa phải hình
-        thoi hay không.
-      </li>
-    </ul>
-  </div>
+<div class="explain-box">
+  <p class="fw-bold">Giải thích các phép so sánh trong điều kiện</p>
+  <ul>
+    <li>
+      <strong>j == abs(mid - i)</strong>: Điều kiện này kiểm tra xem vị trí cột
+      <strong>j</strong> có trùng với 2 cạnh của nửa trái hình thoi hay không.
+    </li>
+    <li>
+      <strong>j == mid + i</strong>: Điều kiện này kiểm tra xem vị trí cột
+      <strong>j</strong> có trùng với cạnh trên của nửa phải hình thoi hay
+      không.
+    </li>
+    <li>
+      <strong>j == mid + abs(d - 1 - i)</strong>: Điều kiện này kiểm tra xem vị
+      trí cột <strong>j</strong> có trùng với cạnh dưới của nửa phải hình thoi
+      hay không.
+    </li>
+  </ul>
+</div>
+
+<div class="explain-box">
   <p>Và khi nhập input là 5, chúng ta sẽ có output như bên dưới:</p>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Output</pre>
   <pre class="io"><code>  *  
  * * 

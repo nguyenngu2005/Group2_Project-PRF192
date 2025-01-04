@@ -3,26 +3,24 @@
   nhất
 </div>
 
-<div>
-  <p class="m-0 fw-bold">Ý tưởng</p>
-  <div class="m-0">
-    <ul>
-      <li>
-        Độ chênh lệch giữa hai thừa số nhỏ nhất khi hai thừa số gần nhau nhất.
-      </li>
-      <li>
-        Điều kiện để hai số là thừa số của một số n là n % i == 0 (tức là i chia
-        hết n, và thừa số còn lại là n / i).
-      </li>
-      <li>
-        Để đảm bảo độ chênh lệch nhỏ nhất, duyệt từ sqrt(n) ngược về 1, vì các
-        thừa số gần nhau nhất sẽ nằm gần căn bậc hai của n.
-      </li>
-    </ul>
-  </div>
+<div class="explain-box">
+  <p class="fw-bold">Ý tưởng</p>
+  <ul>
+    <li>
+      Độ chênh lệch giữa hai thừa số nhỏ nhất khi hai thừa số gần nhau nhất.
+    </li>
+    <li>
+      Điều kiện để hai số là thừa số của một số n là n % i == 0 (tức là i chia
+      hết n, và thừa số còn lại là n / i).
+    </li>
+    <li>
+      Để đảm bảo độ chênh lệch nhỏ nhất, duyệt từ sqrt(n) ngược về 1, vì các
+      thừa số gần nhau nhất sẽ nằm gần căn bậc hai của n.
+    </li>
+  </ul>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
@@ -64,12 +62,12 @@ int main() {
 }</code></pre>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Input</pre>
   <pre class="io"><code>Nhập số nguyên cần xử lý: -28</code></pre>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Output</pre>
   <pre class="io"><code>Hai thừa số cần tìm là: -4 và 7</code></pre>
 </div>

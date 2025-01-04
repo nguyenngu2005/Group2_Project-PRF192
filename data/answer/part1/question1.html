@@ -1,6 +1,6 @@
 <div class="answer-title">Vẽ tam giác cân</div>
 
-<div>
+<div class="explain-box">
   <h1>Cách 1</h1>
   <p>
     Để vẽ một tam giác cân, cách đầu tiên cũng là cách đơn giản nhất là chúng ta
@@ -8,7 +8,7 @@
   </p>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 int main() {
@@ -34,25 +34,25 @@ int main() {
 */</code></pre>
 </div>
 
-<div>
-  <p class="m-0 fw-bold">Giải thích</p>
-  <div class="m-0">
-    <ul>
-      <li>Dòng đầu tiên: Chỉ in một dấu * ở vị trí giữa dòng (ở cột h).</li>
-      <li>
-        Dòng thứ hai trở đi: Các dấu * xuất hiện ngày càng xa vị trí giữa, tạo
-        thành cạnh của tam giác.
-      </li>
-      <li>
-        Dòng cuối cùng: In một hàng đầy đủ 2 * h - 1 dấu * tạo thành đáy tam
-        giác.
-      </li>
-    </ul>
-  </div>
+<div class="explain-box">
+  <p class="fw-bold">Giải thích</p>
+  <ul>
+    <li>Dòng đầu tiên: Chỉ in một dấu * ở vị trí giữa dòng (ở cột h).</li>
+    <li>
+      Dòng thứ hai trở đi: Các dấu * xuất hiện ngày càng xa vị trí giữa, tạo
+      thành cạnh của tam giác.
+    </li>
+    <li>
+      Dòng cuối cùng: In một hàng đầy đủ 2 * h - 1 dấu * tạo thành đáy tam giác.
+    </li>
+  </ul>
+</div>
+
+<div class="explain-box">
   <p>Và khi nhập input là 5 chúng ta sẽ có output như bên dưới:</p>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Output</pre>
   <pre class="io"><code>     *
     * *
@@ -60,10 +60,12 @@ int main() {
   *     *
  *********</code></pre>
 </div>
+
 <br />
+
 <h1>Cách 2</h1>
 
-<div>
+<div class="explain-box">
   <p>
     Với cách 2 này chúng ta sẽ nâng cao hơn một chút, chúng ta sẽ chỉ chạy 1
     vòng lặp và dùng 1 biến i duy nhất<br />
@@ -72,7 +74,7 @@ int main() {
   </p>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
 int main(){
@@ -100,19 +102,17 @@ int main(){
 */</code></pre>
 </div>
 
-<div>
-  <p class="m-0 fw-bold">Giải thích</p>
-  <div class="m-0">
-    <ul>
-      <li>
-        Về phần điều kiện dừng của i, do chỉ chạy 1 biến duy nhất nên chúng ta
-        sẽ cho i chạy từ 0 đến bé hơn h * (2*h - 1), do chiều cao của tam giác
-        là h và đáy là 2*h - 1.
-      </li>
-      <li class="m-0">
-        Có 2 phép tính cần lưu ý ở đây là <strong>i % (2*h - 1)</strong> và
-        <strong>i / (2*h - 1)</strong>:
-      </li>
+<div class="explain-box">
+  <p class="fw-bold">Giải thích</p>
+  <ul>
+    <li>
+      Về phần điều kiện dừng của i, do chỉ chạy 1 biến duy nhất nên chúng ta sẽ
+      cho i chạy từ 0 đến bé hơn h * (2*h - 1), do chiều cao của tam giác là h
+      và đáy là 2*h - 1.
+    </li>
+    <li>
+      Có 2 phép tính cần lưu ý ở đây là <strong>i % (2*h - 1)</strong> và
+      <strong>i / (2*h - 1)</strong>:
       <ul>
         <li>
           <strong>i % (2*h - 1):</strong> Đây là cách lấy số cột hiện tại. Ví dụ
@@ -125,18 +125,17 @@ int main(){
           có thể lấy ví dụ h và i như trên để hiểu rõ.
         </li>
       </ul>
-      <li>
-        Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là
-        <strong>col</strong> (<strong>i % (2*h - 1)</strong>) và
-        <strong>row</strong> (<strong>i / (2*h - 1)</strong>) tương ứng với i và
-        j ở cách 1.
-      </li>
-      <li>
-        Về phần khi dán "\n" khi <strong>col</strong> đã đến cuối dòng, nghĩ là
-        <strong>col</strong> == 2*h - 2, do mỗi dòng chỉ chạy đến bé hơn 2*h -
-        1.
-      </li>
-      <li>Các trường hợp còn lại chúng ta sẽ in ra " ".</li>
-    </ul>
-  </div>
+    </li>
+    <li>
+      Bây giờ khi đã hiểu 2 phép tính ở trên, bạn có thể hiểu nó là
+      <strong>col</strong> (<strong>i % (2*h - 1)</strong>) và
+      <strong>row</strong> (<strong>i / (2*h - 1)</strong>) tương ứng với i và j
+      ở cách 1.
+    </li>
+    <li>
+      Về phần khi dán "\n" khi <strong>col</strong> đã đến cuối dòng, nghĩ là
+      <strong>col</strong> == 2*h - 2, do mỗi dòng chỉ chạy đến bé hơn 2*h - 1.
+    </li>
+    <li>Các trường hợp còn lại chúng ta sẽ in ra " ".</li>
+  </ul>
 </div>

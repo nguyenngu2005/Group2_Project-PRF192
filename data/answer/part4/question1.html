@@ -1,6 +1,6 @@
 <div class="answer-title">Đảo ngược các chữ số trong số nguyên</div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Source</pre>
   <pre class="src"><code class="language-c">#include &lt;stdio.h&gt;
          
@@ -20,35 +20,34 @@ int main() {
 }</code></pre>
 </div>
 
-<div>
-  <p class="m-0 fw-bold">Giải thích hành động trong vòng lặp</p>
-  <div class="m-0">
-    <ul>
-      <li>
-        <strong>while (numb != 0)</strong>: Chạy vòng lặp miễn là numb chưa về
-        0.
-      </li>
-      <li><strong>numbRev = numbRev * 10 + numb % 10</strong></li>
+<div class="explain-box">
+  <p class="fw-bold">Giải thích hành động trong vòng lặp</p>
+  <ul>
+    <li>
+      <strong>while (numb != 0)</strong>: Chạy vòng lặp miễn là numb chưa về 0.
+    </li>
+    <li>
+      <strong>numbRev = numbRev * 10 + numb % 10</strong>
       <ul>
         <li>Dịch chuyển numbRev sang trái một chữ số bằng cách nhân với 10.</li>
         <li>Lấy chữ số cuối cùng của numb bằng numb % 10.</li>
         <li>Thêm chữ số đó vào cuối numbRev.</li>
       </ul>
-      <li>
-        <strong>numb /= 10</strong>: Chia numb cho 10: Chúng ta đang thực hiện
-        phép chia nguyên, nghĩa là chỉ lấy phần nguyên của phép chia. Kết quả là
-        số numb bị giảm đi một chữ số ở hàng đơn vị.
-      </li>
-    </ul>
-  </div>
+    </li>
+    <li>
+      <strong>numb /= 10</strong>: Chia numb cho 10: Chúng ta đang thực hiện
+      phép chia nguyên, nghĩa là chỉ lấy phần nguyên của phép chia. Kết quả là
+      số numb bị giảm đi một chữ số ở hàng đơn vị.
+    </li>
+  </ul>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Input</pre>
   <pre class="io"><code>Nhập số nguyên cần đảo ngược: -789</code></pre>
 </div>
 
-<div class="code-container">
+<div class="code-box">
   <pre class="code-title">Output</pre>
   <pre class="io"><code>Số sau khi đảo ngược: -987</code></pre>
 </div>
